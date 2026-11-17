@@ -1,0 +1,3733 @@
+{
+  "streamer": {
+    "id": 123456789,
+    "name": "gtavi_streamer"
+  },
+  "comments": [
+    {
+      "_id": "c_000001",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 50.147,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_199",
+        "display_name": "viewer_199",
+        "name": "viewer_199"
+      },
+      "message": {
+        "body": "NO WAY HE SURVIVED THAT",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000002",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 50.616,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_082",
+        "display_name": "viewer_082",
+        "name": "viewer_082"
+      },
+      "message": {
+        "body": "W GAMEPLAY",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000003",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 50.876,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_084",
+        "display_name": "viewer_084",
+        "name": "viewer_084"
+      },
+      "message": {
+        "body": "HOLY CRAP",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000004",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 51.166,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_064",
+        "display_name": "viewer_064",
+        "name": "viewer_064"
+      },
+      "message": {
+        "body": "INSANE MOVE!!",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000005",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 51.276,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_067",
+        "display_name": "viewer_067",
+        "name": "viewer_067"
+      },
+      "message": {
+        "body": "OMG WHAT A PLAY",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000006",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 51.884,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_022",
+        "display_name": "viewer_022",
+        "name": "viewer_022"
+      },
+      "message": {
+        "body": "OMG WHAT A PLAY",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000007",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 52.291,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_154",
+        "display_name": "viewer_154",
+        "name": "viewer_154"
+      },
+      "message": {
+        "body": "GTA VI MOMENT",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000008",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 52.562,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_139",
+        "display_name": "viewer_139",
+        "name": "viewer_139"
+      },
+      "message": {
+        "body": "W GAMEPLAY",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000009",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 52.598,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_143",
+        "display_name": "viewer_143",
+        "name": "viewer_143"
+      },
+      "message": {
+        "body": "INSANE MOVE!!",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000010",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 52.795,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_180",
+        "display_name": "viewer_180",
+        "name": "viewer_180"
+      },
+      "message": {
+        "body": "POG CHAT",
+        "emoticons": [
+          {
+            "_id": "POG",
+            "begin": 0,
+            "end": 3
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000011",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 52.796,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_187",
+        "display_name": "viewer_187",
+        "name": "viewer_187"
+      },
+      "message": {
+        "body": "INSANE MOVE!!",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000012",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 53.086,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_099",
+        "display_name": "viewer_099",
+        "name": "viewer_099"
+      },
+      "message": {
+        "body": "NO WAY HE SURVIVED THAT",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000013",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 53.789,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_099",
+        "display_name": "viewer_099",
+        "name": "viewer_099"
+      },
+      "message": {
+        "body": "W GAMEPLAY",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000014",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 53.893,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_034",
+        "display_name": "viewer_034",
+        "name": "viewer_034"
+      },
+      "message": {
+        "body": "LUL THAT WAS CRAZY",
+        "emoticons": [
+          {
+            "_id": "LUL",
+            "begin": 0,
+            "end": 3
+          },
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000015",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 53.998,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_048",
+        "display_name": "viewer_048",
+        "name": "viewer_048"
+      },
+      "message": {
+        "body": "LUL THAT WAS CRAZY",
+        "emoticons": [
+          {
+            "_id": "LUL",
+            "begin": 0,
+            "end": 3
+          },
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000016",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 54.292,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_137",
+        "display_name": "viewer_137",
+        "name": "viewer_137"
+      },
+      "message": {
+        "body": "NO WAY HE SURVIVED THAT",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000017",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 54.538,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_121",
+        "display_name": "viewer_121",
+        "name": "viewer_121"
+      },
+      "message": {
+        "body": "LUL THAT WAS CRAZY",
+        "emoticons": [
+          {
+            "_id": "LUL",
+            "begin": 0,
+            "end": 3
+          },
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000018",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 54.545,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_191",
+        "display_name": "viewer_191",
+        "name": "viewer_191"
+      },
+      "message": {
+        "body": "OMG WHAT A PLAY",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000019",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 54.679,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_069",
+        "display_name": "viewer_069",
+        "name": "viewer_069"
+      },
+      "message": {
+        "body": "INSANE MOVE!!",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000020",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 55.628,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_068",
+        "display_name": "viewer_068",
+        "name": "viewer_068"
+      },
+      "message": {
+        "body": "SHEEEESH",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000021",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 55.767,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_073",
+        "display_name": "viewer_073",
+        "name": "viewer_073"
+      },
+      "message": {
+        "body": "SHEEEESH",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000022",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 55.872,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_099",
+        "display_name": "viewer_099",
+        "name": "viewer_099"
+      },
+      "message": {
+        "body": "NO WAY HE SURVIVED THAT",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000023",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 56.079,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_092",
+        "display_name": "viewer_092",
+        "name": "viewer_092"
+      },
+      "message": {
+        "body": "CLIP THAT RIGHT NOW",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000024",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 56.247,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_153",
+        "display_name": "viewer_153",
+        "name": "viewer_153"
+      },
+      "message": {
+        "body": "SHEEEESH",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000025",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 56.517,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_053",
+        "display_name": "viewer_053",
+        "name": "viewer_053"
+      },
+      "message": {
+        "body": "GTA VI MOMENT",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000026",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 57.091,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_052",
+        "display_name": "viewer_052",
+        "name": "viewer_052"
+      },
+      "message": {
+        "body": "GTA VI MOMENT",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000027",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 57.409,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_158",
+        "display_name": "viewer_158",
+        "name": "viewer_158"
+      },
+      "message": {
+        "body": "W GAMEPLAY",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000028",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 57.416,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_147",
+        "display_name": "viewer_147",
+        "name": "viewer_147"
+      },
+      "message": {
+        "body": "CLIP THAT RIGHT NOW",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000029",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 57.75,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_016",
+        "display_name": "viewer_016",
+        "name": "viewer_016"
+      },
+      "message": {
+        "body": "OMG WHAT A PLAY",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000030",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 58.171,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_089",
+        "display_name": "viewer_089",
+        "name": "viewer_089"
+      },
+      "message": {
+        "body": "SHEEEESH",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000031",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 58.734,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_026",
+        "display_name": "viewer_026",
+        "name": "viewer_026"
+      },
+      "message": {
+        "body": "W GAMEPLAY",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000032",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 58.743,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_141",
+        "display_name": "viewer_141",
+        "name": "viewer_141"
+      },
+      "message": {
+        "body": "CLIP THAT RIGHT NOW",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000033",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 58.778,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_144",
+        "display_name": "viewer_144",
+        "name": "viewer_144"
+      },
+      "message": {
+        "body": "LUL THAT WAS CRAZY",
+        "emoticons": [
+          {
+            "_id": "LUL",
+            "begin": 0,
+            "end": 3
+          },
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000034",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 58.868,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_161",
+        "display_name": "viewer_161",
+        "name": "viewer_161"
+      },
+      "message": {
+        "body": "POG CHAT",
+        "emoticons": [
+          {
+            "_id": "POG",
+            "begin": 0,
+            "end": 3
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000035",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 59.008,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_109",
+        "display_name": "viewer_109",
+        "name": "viewer_109"
+      },
+      "message": {
+        "body": "INSANE MOVE!!",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000036",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 59.178,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_093",
+        "display_name": "viewer_093",
+        "name": "viewer_093"
+      },
+      "message": {
+        "body": "HOLY CRAP",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000037",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 59.334,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_004",
+        "display_name": "viewer_004",
+        "name": "viewer_004"
+      },
+      "message": {
+        "body": "GTA VI MOMENT",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000038",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 59.391,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_099",
+        "display_name": "viewer_099",
+        "name": "viewer_099"
+      },
+      "message": {
+        "body": "GTA VI MOMENT",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000039",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 59.422,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_132",
+        "display_name": "viewer_132",
+        "name": "viewer_132"
+      },
+      "message": {
+        "body": "W GAMEPLAY",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000040",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 59.514,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_062",
+        "display_name": "viewer_062",
+        "name": "viewer_062"
+      },
+      "message": {
+        "body": "NO WAY HE SURVIVED THAT",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000041",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 61.072,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_028",
+        "display_name": "viewer_028",
+        "name": "viewer_028"
+      },
+      "message": {
+        "body": "POG CHAT",
+        "emoticons": [
+          {
+            "_id": "POG",
+            "begin": 0,
+            "end": 3
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000042",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 61.092,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_019",
+        "display_name": "viewer_019",
+        "name": "viewer_019"
+      },
+      "message": {
+        "body": "NO WAY HE SURVIVED THAT",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000043",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 61.141,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_126",
+        "display_name": "viewer_126",
+        "name": "viewer_126"
+      },
+      "message": {
+        "body": "OMG WHAT A PLAY",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000044",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 61.184,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_151",
+        "display_name": "viewer_151",
+        "name": "viewer_151"
+      },
+      "message": {
+        "body": "W GAMEPLAY",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000045",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 61.305,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_157",
+        "display_name": "viewer_157",
+        "name": "viewer_157"
+      },
+      "message": {
+        "body": "OMG WHAT A PLAY",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000046",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 61.375,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_036",
+        "display_name": "viewer_036",
+        "name": "viewer_036"
+      },
+      "message": {
+        "body": "W GAMEPLAY",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000047",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 62.633,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_038",
+        "display_name": "viewer_038",
+        "name": "viewer_038"
+      },
+      "message": {
+        "body": "LUL THAT WAS CRAZY",
+        "emoticons": [
+          {
+            "_id": "LUL",
+            "begin": 0,
+            "end": 3
+          },
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000048",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 62.694,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_132",
+        "display_name": "viewer_132",
+        "name": "viewer_132"
+      },
+      "message": {
+        "body": "INSANE MOVE!!",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000049",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 62.877,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_135",
+        "display_name": "viewer_135",
+        "name": "viewer_135"
+      },
+      "message": {
+        "body": "INSANE MOVE!!",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000050",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 63.238,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_035",
+        "display_name": "viewer_035",
+        "name": "viewer_035"
+      },
+      "message": {
+        "body": "POG CHAT",
+        "emoticons": [
+          {
+            "_id": "POG",
+            "begin": 0,
+            "end": 3
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000051",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 63.297,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_158",
+        "display_name": "viewer_158",
+        "name": "viewer_158"
+      },
+      "message": {
+        "body": "INSANE MOVE!!",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000052",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 63.368,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_060",
+        "display_name": "viewer_060",
+        "name": "viewer_060"
+      },
+      "message": {
+        "body": "SHEEEESH",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000053",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 63.396,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_197",
+        "display_name": "viewer_197",
+        "name": "viewer_197"
+      },
+      "message": {
+        "body": "POG CHAT",
+        "emoticons": [
+          {
+            "_id": "POG",
+            "begin": 0,
+            "end": 3
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000054",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 63.65,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_089",
+        "display_name": "viewer_089",
+        "name": "viewer_089"
+      },
+      "message": {
+        "body": "LUL THAT WAS CRAZY",
+        "emoticons": [
+          {
+            "_id": "LUL",
+            "begin": 0,
+            "end": 3
+          },
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000055",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 63.661,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_122",
+        "display_name": "viewer_122",
+        "name": "viewer_122"
+      },
+      "message": {
+        "body": "POG CHAT",
+        "emoticons": [
+          {
+            "_id": "POG",
+            "begin": 0,
+            "end": 3
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000056",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 63.947,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_059",
+        "display_name": "viewer_059",
+        "name": "viewer_059"
+      },
+      "message": {
+        "body": "OMG WHAT A PLAY",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000057",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 64.005,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_031",
+        "display_name": "viewer_031",
+        "name": "viewer_031"
+      },
+      "message": {
+        "body": "SHEEEESH",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000058",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 64.103,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_084",
+        "display_name": "viewer_084",
+        "name": "viewer_084"
+      },
+      "message": {
+        "body": "W GAMEPLAY",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000059",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 64.895,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_093",
+        "display_name": "viewer_093",
+        "name": "viewer_093"
+      },
+      "message": {
+        "body": "GTA VI MOMENT",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000060",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 65.162,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_013",
+        "display_name": "viewer_013",
+        "name": "viewer_013"
+      },
+      "message": {
+        "body": "OMG WHAT A PLAY",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000061",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 65.223,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_055",
+        "display_name": "viewer_055",
+        "name": "viewer_055"
+      },
+      "message": {
+        "body": "W GAMEPLAY",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000062",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 65.3,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_134",
+        "display_name": "viewer_134",
+        "name": "viewer_134"
+      },
+      "message": {
+        "body": "W GAMEPLAY",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000063",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 65.479,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_088",
+        "display_name": "viewer_088",
+        "name": "viewer_088"
+      },
+      "message": {
+        "body": "SHEEEESH",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000064",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 65.568,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_033",
+        "display_name": "viewer_033",
+        "name": "viewer_033"
+      },
+      "message": {
+        "body": "POG CHAT",
+        "emoticons": [
+          {
+            "_id": "POG",
+            "begin": 0,
+            "end": 3
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000065",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 65.615,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_108",
+        "display_name": "viewer_108",
+        "name": "viewer_108"
+      },
+      "message": {
+        "body": "W GAMEPLAY",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000066",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 65.678,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_161",
+        "display_name": "viewer_161",
+        "name": "viewer_161"
+      },
+      "message": {
+        "body": "CLIP THAT RIGHT NOW",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000067",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 65.721,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_190",
+        "display_name": "viewer_190",
+        "name": "viewer_190"
+      },
+      "message": {
+        "body": "LUL THAT WAS CRAZY",
+        "emoticons": [
+          {
+            "_id": "LUL",
+            "begin": 0,
+            "end": 3
+          },
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000068",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 65.738,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_109",
+        "display_name": "viewer_109",
+        "name": "viewer_109"
+      },
+      "message": {
+        "body": "POG CHAT",
+        "emoticons": [
+          {
+            "_id": "POG",
+            "begin": 0,
+            "end": 3
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000069",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 66.095,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_170",
+        "display_name": "viewer_170",
+        "name": "viewer_170"
+      },
+      "message": {
+        "body": "W GAMEPLAY",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000070",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 66.455,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_057",
+        "display_name": "viewer_057",
+        "name": "viewer_057"
+      },
+      "message": {
+        "body": "OMG WHAT A PLAY",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000071",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 66.553,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_073",
+        "display_name": "viewer_073",
+        "name": "viewer_073"
+      },
+      "message": {
+        "body": "HOLY CRAP",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000072",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 66.645,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_002",
+        "display_name": "viewer_002",
+        "name": "viewer_002"
+      },
+      "message": {
+        "body": "HOLY CRAP",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000073",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 66.654,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_109",
+        "display_name": "viewer_109",
+        "name": "viewer_109"
+      },
+      "message": {
+        "body": "INSANE MOVE!!",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000074",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 67.068,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_061",
+        "display_name": "viewer_061",
+        "name": "viewer_061"
+      },
+      "message": {
+        "body": "POG CHAT",
+        "emoticons": [
+          {
+            "_id": "POG",
+            "begin": 0,
+            "end": 3
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000075",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 67.172,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_063",
+        "display_name": "viewer_063",
+        "name": "viewer_063"
+      },
+      "message": {
+        "body": "INSANE MOVE!!",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000076",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 67.862,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_133",
+        "display_name": "viewer_133",
+        "name": "viewer_133"
+      },
+      "message": {
+        "body": "NO WAY HE SURVIVED THAT",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000077",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 68.535,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_024",
+        "display_name": "viewer_024",
+        "name": "viewer_024"
+      },
+      "message": {
+        "body": "CLIP THAT RIGHT NOW",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000078",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 69.35,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_049",
+        "display_name": "viewer_049",
+        "name": "viewer_049"
+      },
+      "message": {
+        "body": "NO WAY HE SURVIVED THAT",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000079",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 69.414,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_146",
+        "display_name": "viewer_146",
+        "name": "viewer_146"
+      },
+      "message": {
+        "body": "GTA VI MOMENT",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000080",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 69.512,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_187",
+        "display_name": "viewer_187",
+        "name": "viewer_187"
+      },
+      "message": {
+        "body": "GTA VI MOMENT",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000081",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 410.279,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_058",
+        "display_name": "viewer_058",
+        "name": "viewer_058"
+      },
+      "message": {
+        "body": "HOLY CRAP",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000082",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 410.357,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_050",
+        "display_name": "viewer_050",
+        "name": "viewer_050"
+      },
+      "message": {
+        "body": "GTA VI MOMENT",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000083",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 410.497,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_093",
+        "display_name": "viewer_093",
+        "name": "viewer_093"
+      },
+      "message": {
+        "body": "CLIP THAT RIGHT NOW",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000084",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 410.748,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_067",
+        "display_name": "viewer_067",
+        "name": "viewer_067"
+      },
+      "message": {
+        "body": "POG CHAT",
+        "emoticons": [
+          {
+            "_id": "POG",
+            "begin": 0,
+            "end": 3
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000085",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 410.898,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_153",
+        "display_name": "viewer_153",
+        "name": "viewer_153"
+      },
+      "message": {
+        "body": "NO WAY HE SURVIVED THAT",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000086",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 411.889,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_186",
+        "display_name": "viewer_186",
+        "name": "viewer_186"
+      },
+      "message": {
+        "body": "HOLY CRAP",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000087",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 412.118,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_150",
+        "display_name": "viewer_150",
+        "name": "viewer_150"
+      },
+      "message": {
+        "body": "NO WAY HE SURVIVED THAT",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000088",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 412.155,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_058",
+        "display_name": "viewer_058",
+        "name": "viewer_058"
+      },
+      "message": {
+        "body": "W GAMEPLAY",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000089",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 412.183,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_024",
+        "display_name": "viewer_024",
+        "name": "viewer_024"
+      },
+      "message": {
+        "body": "LUL THAT WAS CRAZY",
+        "emoticons": [
+          {
+            "_id": "LUL",
+            "begin": 0,
+            "end": 3
+          },
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000090",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 412.437,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_185",
+        "display_name": "viewer_185",
+        "name": "viewer_185"
+      },
+      "message": {
+        "body": "W GAMEPLAY",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000091",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 412.455,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_023",
+        "display_name": "viewer_023",
+        "name": "viewer_023"
+      },
+      "message": {
+        "body": "NO WAY HE SURVIVED THAT",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000092",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 412.475,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_192",
+        "display_name": "viewer_192",
+        "name": "viewer_192"
+      },
+      "message": {
+        "body": "HOLY CRAP",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000093",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 412.621,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_055",
+        "display_name": "viewer_055",
+        "name": "viewer_055"
+      },
+      "message": {
+        "body": "W GAMEPLAY",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000094",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 412.636,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_106",
+        "display_name": "viewer_106",
+        "name": "viewer_106"
+      },
+      "message": {
+        "body": "CLIP THAT RIGHT NOW",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000095",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 412.807,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_054",
+        "display_name": "viewer_054",
+        "name": "viewer_054"
+      },
+      "message": {
+        "body": "CLIP THAT RIGHT NOW",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000096",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 412.878,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_198",
+        "display_name": "viewer_198",
+        "name": "viewer_198"
+      },
+      "message": {
+        "body": "GTA VI MOMENT",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000097",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 413.066,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_168",
+        "display_name": "viewer_168",
+        "name": "viewer_168"
+      },
+      "message": {
+        "body": "HOLY CRAP",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000098",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 413.292,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_191",
+        "display_name": "viewer_191",
+        "name": "viewer_191"
+      },
+      "message": {
+        "body": "INSANE MOVE!!",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000099",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 413.585,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_176",
+        "display_name": "viewer_176",
+        "name": "viewer_176"
+      },
+      "message": {
+        "body": "OMG WHAT A PLAY",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000100",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 413.929,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_095",
+        "display_name": "viewer_095",
+        "name": "viewer_095"
+      },
+      "message": {
+        "body": "POG CHAT",
+        "emoticons": [
+          {
+            "_id": "POG",
+            "begin": 0,
+            "end": 3
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000101",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 413.996,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_072",
+        "display_name": "viewer_072",
+        "name": "viewer_072"
+      },
+      "message": {
+        "body": "INSANE MOVE!!",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000102",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 414.593,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_039",
+        "display_name": "viewer_039",
+        "name": "viewer_039"
+      },
+      "message": {
+        "body": "HOLY CRAP",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000103",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 414.604,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_064",
+        "display_name": "viewer_064",
+        "name": "viewer_064"
+      },
+      "message": {
+        "body": "LUL THAT WAS CRAZY",
+        "emoticons": [
+          {
+            "_id": "LUL",
+            "begin": 0,
+            "end": 3
+          },
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000104",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 414.819,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_184",
+        "display_name": "viewer_184",
+        "name": "viewer_184"
+      },
+      "message": {
+        "body": "INSANE MOVE!!",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000105",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 415.119,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_183",
+        "display_name": "viewer_183",
+        "name": "viewer_183"
+      },
+      "message": {
+        "body": "SHEEEESH",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000106",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 415.249,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_120",
+        "display_name": "viewer_120",
+        "name": "viewer_120"
+      },
+      "message": {
+        "body": "INSANE MOVE!!",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000107",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 415.729,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_032",
+        "display_name": "viewer_032",
+        "name": "viewer_032"
+      },
+      "message": {
+        "body": "CLIP THAT RIGHT NOW",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000108",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 415.818,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_115",
+        "display_name": "viewer_115",
+        "name": "viewer_115"
+      },
+      "message": {
+        "body": "INSANE MOVE!!",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000109",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 416.019,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_091",
+        "display_name": "viewer_091",
+        "name": "viewer_091"
+      },
+      "message": {
+        "body": "INSANE MOVE!!",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000110",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 416.206,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_108",
+        "display_name": "viewer_108",
+        "name": "viewer_108"
+      },
+      "message": {
+        "body": "OMG WHAT A PLAY",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000111",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 416.319,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_142",
+        "display_name": "viewer_142",
+        "name": "viewer_142"
+      },
+      "message": {
+        "body": "OMG WHAT A PLAY",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000112",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 416.343,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_039",
+        "display_name": "viewer_039",
+        "name": "viewer_039"
+      },
+      "message": {
+        "body": "INSANE MOVE!!",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000113",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 417.418,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_166",
+        "display_name": "viewer_166",
+        "name": "viewer_166"
+      },
+      "message": {
+        "body": "OMG WHAT A PLAY",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000114",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 417.473,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_086",
+        "display_name": "viewer_086",
+        "name": "viewer_086"
+      },
+      "message": {
+        "body": "POG CHAT",
+        "emoticons": [
+          {
+            "_id": "POG",
+            "begin": 0,
+            "end": 3
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000115",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 417.952,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_103",
+        "display_name": "viewer_103",
+        "name": "viewer_103"
+      },
+      "message": {
+        "body": "NO WAY HE SURVIVED THAT",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000116",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 418.382,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_160",
+        "display_name": "viewer_160",
+        "name": "viewer_160"
+      },
+      "message": {
+        "body": "LUL THAT WAS CRAZY",
+        "emoticons": [
+          {
+            "_id": "LUL",
+            "begin": 0,
+            "end": 3
+          },
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000117",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 418.702,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_165",
+        "display_name": "viewer_165",
+        "name": "viewer_165"
+      },
+      "message": {
+        "body": "LUL THAT WAS CRAZY",
+        "emoticons": [
+          {
+            "_id": "LUL",
+            "begin": 0,
+            "end": 3
+          },
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000118",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 419.348,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_196",
+        "display_name": "viewer_196",
+        "name": "viewer_196"
+      },
+      "message": {
+        "body": "POG CHAT",
+        "emoticons": [
+          {
+            "_id": "POG",
+            "begin": 0,
+            "end": 3
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000119",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 419.772,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_147",
+        "display_name": "viewer_147",
+        "name": "viewer_147"
+      },
+      "message": {
+        "body": "HOLY CRAP",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000120",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 420.015,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_158",
+        "display_name": "viewer_158",
+        "name": "viewer_158"
+      },
+      "message": {
+        "body": "HOLY CRAP",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000121",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 420.127,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_107",
+        "display_name": "viewer_107",
+        "name": "viewer_107"
+      },
+      "message": {
+        "body": "OMG WHAT A PLAY",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000122",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 420.301,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_099",
+        "display_name": "viewer_099",
+        "name": "viewer_099"
+      },
+      "message": {
+        "body": "INSANE MOVE!!",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000123",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 420.377,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_177",
+        "display_name": "viewer_177",
+        "name": "viewer_177"
+      },
+      "message": {
+        "body": "CLIP THAT RIGHT NOW",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000124",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 421.097,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_046",
+        "display_name": "viewer_046",
+        "name": "viewer_046"
+      },
+      "message": {
+        "body": "CLIP THAT RIGHT NOW",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000125",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 421.104,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_128",
+        "display_name": "viewer_128",
+        "name": "viewer_128"
+      },
+      "message": {
+        "body": "POG CHAT",
+        "emoticons": [
+          {
+            "_id": "POG",
+            "begin": 0,
+            "end": 3
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000126",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 421.622,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_189",
+        "display_name": "viewer_189",
+        "name": "viewer_189"
+      },
+      "message": {
+        "body": "W GAMEPLAY",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000127",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 421.921,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_057",
+        "display_name": "viewer_057",
+        "name": "viewer_057"
+      },
+      "message": {
+        "body": "OMG WHAT A PLAY",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000128",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 421.988,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_002",
+        "display_name": "viewer_002",
+        "name": "viewer_002"
+      },
+      "message": {
+        "body": "LUL THAT WAS CRAZY",
+        "emoticons": [
+          {
+            "_id": "LUL",
+            "begin": 0,
+            "end": 3
+          },
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000129",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 422.68,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_185",
+        "display_name": "viewer_185",
+        "name": "viewer_185"
+      },
+      "message": {
+        "body": "POG CHAT",
+        "emoticons": [
+          {
+            "_id": "POG",
+            "begin": 0,
+            "end": 3
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000130",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 423.233,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_178",
+        "display_name": "viewer_178",
+        "name": "viewer_178"
+      },
+      "message": {
+        "body": "INSANE MOVE!!",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000131",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 423.257,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_019",
+        "display_name": "viewer_019",
+        "name": "viewer_019"
+      },
+      "message": {
+        "body": "HOLY CRAP",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000132",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 423.553,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_022",
+        "display_name": "viewer_022",
+        "name": "viewer_022"
+      },
+      "message": {
+        "body": "OMG WHAT A PLAY",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000133",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 423.885,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_081",
+        "display_name": "viewer_081",
+        "name": "viewer_081"
+      },
+      "message": {
+        "body": "SHEEEESH",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000134",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 424.308,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_138",
+        "display_name": "viewer_138",
+        "name": "viewer_138"
+      },
+      "message": {
+        "body": "OMG WHAT A PLAY",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000135",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 424.78,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_167",
+        "display_name": "viewer_167",
+        "name": "viewer_167"
+      },
+      "message": {
+        "body": "HOLY CRAP",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000136",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 424.936,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_160",
+        "display_name": "viewer_160",
+        "name": "viewer_160"
+      },
+      "message": {
+        "body": "SHEEEESH",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000137",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 424.972,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_048",
+        "display_name": "viewer_048",
+        "name": "viewer_048"
+      },
+      "message": {
+        "body": "SHEEEESH",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000138",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 425.44,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_064",
+        "display_name": "viewer_064",
+        "name": "viewer_064"
+      },
+      "message": {
+        "body": "HOLY CRAP",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000139",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 425.548,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_116",
+        "display_name": "viewer_116",
+        "name": "viewer_116"
+      },
+      "message": {
+        "body": "GTA VI MOMENT",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000140",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 425.695,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_125",
+        "display_name": "viewer_125",
+        "name": "viewer_125"
+      },
+      "message": {
+        "body": "NO WAY HE SURVIVED THAT",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000141",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 426.082,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_123",
+        "display_name": "viewer_123",
+        "name": "viewer_123"
+      },
+      "message": {
+        "body": "GTA VI MOMENT",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000142",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 426.087,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_148",
+        "display_name": "viewer_148",
+        "name": "viewer_148"
+      },
+      "message": {
+        "body": "INSANE MOVE!!",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000143",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 426.165,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_165",
+        "display_name": "viewer_165",
+        "name": "viewer_165"
+      },
+      "message": {
+        "body": "POG CHAT",
+        "emoticons": [
+          {
+            "_id": "POG",
+            "begin": 0,
+            "end": 3
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000144",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 426.596,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_065",
+        "display_name": "viewer_065",
+        "name": "viewer_065"
+      },
+      "message": {
+        "body": "POG CHAT",
+        "emoticons": [
+          {
+            "_id": "POG",
+            "begin": 0,
+            "end": 3
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000145",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 426.622,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_193",
+        "display_name": "viewer_193",
+        "name": "viewer_193"
+      },
+      "message": {
+        "body": "HOLY CRAP",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000146",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 427.491,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_166",
+        "display_name": "viewer_166",
+        "name": "viewer_166"
+      },
+      "message": {
+        "body": "W GAMEPLAY",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000147",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 427.816,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_157",
+        "display_name": "viewer_157",
+        "name": "viewer_157"
+      },
+      "message": {
+        "body": "LUL THAT WAS CRAZY",
+        "emoticons": [
+          {
+            "_id": "LUL",
+            "begin": 0,
+            "end": 3
+          },
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000148",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 427.834,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_137",
+        "display_name": "viewer_137",
+        "name": "viewer_137"
+      },
+      "message": {
+        "body": "NO WAY HE SURVIVED THAT",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000149",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 427.869,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_050",
+        "display_name": "viewer_050",
+        "name": "viewer_050"
+      },
+      "message": {
+        "body": "CLIP THAT RIGHT NOW",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000150",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 428.32,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_013",
+        "display_name": "viewer_013",
+        "name": "viewer_013"
+      },
+      "message": {
+        "body": "INSANE MOVE!!",
+        "emoticons": []
+      }
+    },
+    {
+      "_id": "c_000151",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 428.496,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_087",
+        "display_name": "viewer_087",
+        "name": "viewer_087"
+      },
+      "message": {
+        "body": "W GAMEPLAY",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000152",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 428.551,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_033",
+        "display_name": "viewer_033",
+        "name": "viewer_033"
+      },
+      "message": {
+        "body": "W GAMEPLAY",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000153",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 428.66,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_121",
+        "display_name": "viewer_121",
+        "name": "viewer_121"
+      },
+      "message": {
+        "body": "CLIP THAT RIGHT NOW",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000154",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 428.721,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_068",
+        "display_name": "viewer_068",
+        "name": "viewer_068"
+      },
+      "message": {
+        "body": "LUL THAT WAS CRAZY",
+        "emoticons": [
+          {
+            "_id": "LUL",
+            "begin": 0,
+            "end": 3
+          },
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000155",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 428.736,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_101",
+        "display_name": "viewer_101",
+        "name": "viewer_101"
+      },
+      "message": {
+        "body": "LUL THAT WAS CRAZY",
+        "emoticons": [
+          {
+            "_id": "LUL",
+            "begin": 0,
+            "end": 3
+          },
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000156",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 429.058,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_147",
+        "display_name": "viewer_147",
+        "name": "viewer_147"
+      },
+      "message": {
+        "body": "LUL THAT WAS CRAZY",
+        "emoticons": [
+          {
+            "_id": "LUL",
+            "begin": 0,
+            "end": 3
+          },
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000157",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 429.112,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_087",
+        "display_name": "viewer_087",
+        "name": "viewer_087"
+      },
+      "message": {
+        "body": "LUL THAT WAS CRAZY",
+        "emoticons": [
+          {
+            "_id": "LUL",
+            "begin": 0,
+            "end": 3
+          },
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000158",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 429.325,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_037",
+        "display_name": "viewer_037",
+        "name": "viewer_037"
+      },
+      "message": {
+        "body": "NO WAY HE SURVIVED THAT",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000159",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 429.437,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_047",
+        "display_name": "viewer_047",
+        "name": "viewer_047"
+      },
+      "message": {
+        "body": "CLIP THAT RIGHT NOW",
+        "emoticons": [
+          {
+            "_id": "W",
+            "begin": 0,
+            "end": 1
+          }
+        ]
+      }
+    },
+    {
+      "_id": "c_000160",
+      "channel_id": "123456789",
+      "content_id": "v987654321",
+      "content_offset_seconds": 429.848,
+      "content_type": "video",
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "source": "chat",
+      "state": "published",
+      "commenter": {
+        "_id": "u_viewer_158",
+        "display_name": "viewer_158",
+        "name": "viewer_158"
+      },
+      "message": {
+        "body": "SHEEEESH",
+        "emoticons": []
+      }
+    }
+  ]
+}

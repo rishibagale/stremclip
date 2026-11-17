@@ -1,0 +1,2533 @@
+[
+  {
+    "message_id": "msg_000001",
+    "message": "NO WAY HE SURVIVED THAT",
+    "message_type": "text_message",
+    "time_in_seconds": 50.147,
+    "time_text": "00:50",
+    "author": {
+      "id": "auth_viewer_199",
+      "name": "viewer_199",
+      "display_name": "viewer_199"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000002",
+    "message": "W GAMEPLAY",
+    "message_type": "text_message",
+    "time_in_seconds": 50.616,
+    "time_text": "00:50",
+    "author": {
+      "id": "auth_viewer_082",
+      "name": "viewer_082",
+      "display_name": "viewer_082"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000003",
+    "message": "HOLY CRAP",
+    "message_type": "text_message",
+    "time_in_seconds": 50.876,
+    "time_text": "00:50",
+    "author": {
+      "id": "auth_viewer_084",
+      "name": "viewer_084",
+      "display_name": "viewer_084"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000004",
+    "message": "INSANE MOVE!!",
+    "message_type": "text_message",
+    "time_in_seconds": 51.166,
+    "time_text": "00:51",
+    "author": {
+      "id": "auth_viewer_064",
+      "name": "viewer_064",
+      "display_name": "viewer_064"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000005",
+    "message": "OMG WHAT A PLAY",
+    "message_type": "text_message",
+    "time_in_seconds": 51.276,
+    "time_text": "00:51",
+    "author": {
+      "id": "auth_viewer_067",
+      "name": "viewer_067",
+      "display_name": "viewer_067"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000006",
+    "message": "OMG WHAT A PLAY",
+    "message_type": "text_message",
+    "time_in_seconds": 51.884,
+    "time_text": "00:51",
+    "author": {
+      "id": "auth_viewer_022",
+      "name": "viewer_022",
+      "display_name": "viewer_022"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000007",
+    "message": "GTA VI MOMENT",
+    "message_type": "text_message",
+    "time_in_seconds": 52.291,
+    "time_text": "00:52",
+    "author": {
+      "id": "auth_viewer_154",
+      "name": "viewer_154",
+      "display_name": "viewer_154"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000008",
+    "message": "W GAMEPLAY",
+    "message_type": "text_message",
+    "time_in_seconds": 52.562,
+    "time_text": "00:52",
+    "author": {
+      "id": "auth_viewer_139",
+      "name": "viewer_139",
+      "display_name": "viewer_139"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000009",
+    "message": "INSANE MOVE!!",
+    "message_type": "text_message",
+    "time_in_seconds": 52.598,
+    "time_text": "00:52",
+    "author": {
+      "id": "auth_viewer_143",
+      "name": "viewer_143",
+      "display_name": "viewer_143"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000010",
+    "message": "POG CHAT",
+    "message_type": "text_message",
+    "time_in_seconds": 52.795,
+    "time_text": "00:52",
+    "author": {
+      "id": "auth_viewer_180",
+      "name": "viewer_180",
+      "display_name": "viewer_180"
+    },
+    "emotes": [
+      {
+        "name": "POG"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000011",
+    "message": "INSANE MOVE!!",
+    "message_type": "text_message",
+    "time_in_seconds": 52.796,
+    "time_text": "00:52",
+    "author": {
+      "id": "auth_viewer_187",
+      "name": "viewer_187",
+      "display_name": "viewer_187"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000012",
+    "message": "NO WAY HE SURVIVED THAT",
+    "message_type": "text_message",
+    "time_in_seconds": 53.086,
+    "time_text": "00:53",
+    "author": {
+      "id": "auth_viewer_099",
+      "name": "viewer_099",
+      "display_name": "viewer_099"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000013",
+    "message": "W GAMEPLAY",
+    "message_type": "text_message",
+    "time_in_seconds": 53.789,
+    "time_text": "00:53",
+    "author": {
+      "id": "auth_viewer_099",
+      "name": "viewer_099",
+      "display_name": "viewer_099"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000014",
+    "message": "LUL THAT WAS CRAZY",
+    "message_type": "text_message",
+    "time_in_seconds": 53.893,
+    "time_text": "00:53",
+    "author": {
+      "id": "auth_viewer_034",
+      "name": "viewer_034",
+      "display_name": "viewer_034"
+    },
+    "emotes": [
+      {
+        "name": "LUL"
+      },
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000015",
+    "message": "LUL THAT WAS CRAZY",
+    "message_type": "text_message",
+    "time_in_seconds": 53.998,
+    "time_text": "00:53",
+    "author": {
+      "id": "auth_viewer_048",
+      "name": "viewer_048",
+      "display_name": "viewer_048"
+    },
+    "emotes": [
+      {
+        "name": "LUL"
+      },
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000016",
+    "message": "NO WAY HE SURVIVED THAT",
+    "message_type": "text_message",
+    "time_in_seconds": 54.292,
+    "time_text": "00:54",
+    "author": {
+      "id": "auth_viewer_137",
+      "name": "viewer_137",
+      "display_name": "viewer_137"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000017",
+    "message": "LUL THAT WAS CRAZY",
+    "message_type": "text_message",
+    "time_in_seconds": 54.538,
+    "time_text": "00:54",
+    "author": {
+      "id": "auth_viewer_121",
+      "name": "viewer_121",
+      "display_name": "viewer_121"
+    },
+    "emotes": [
+      {
+        "name": "LUL"
+      },
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000018",
+    "message": "OMG WHAT A PLAY",
+    "message_type": "text_message",
+    "time_in_seconds": 54.545,
+    "time_text": "00:54",
+    "author": {
+      "id": "auth_viewer_191",
+      "name": "viewer_191",
+      "display_name": "viewer_191"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000019",
+    "message": "INSANE MOVE!!",
+    "message_type": "text_message",
+    "time_in_seconds": 54.679,
+    "time_text": "00:54",
+    "author": {
+      "id": "auth_viewer_069",
+      "name": "viewer_069",
+      "display_name": "viewer_069"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000020",
+    "message": "SHEEEESH",
+    "message_type": "text_message",
+    "time_in_seconds": 55.628,
+    "time_text": "00:55",
+    "author": {
+      "id": "auth_viewer_068",
+      "name": "viewer_068",
+      "display_name": "viewer_068"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000021",
+    "message": "SHEEEESH",
+    "message_type": "text_message",
+    "time_in_seconds": 55.767,
+    "time_text": "00:55",
+    "author": {
+      "id": "auth_viewer_073",
+      "name": "viewer_073",
+      "display_name": "viewer_073"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000022",
+    "message": "NO WAY HE SURVIVED THAT",
+    "message_type": "text_message",
+    "time_in_seconds": 55.872,
+    "time_text": "00:55",
+    "author": {
+      "id": "auth_viewer_099",
+      "name": "viewer_099",
+      "display_name": "viewer_099"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000023",
+    "message": "CLIP THAT RIGHT NOW",
+    "message_type": "text_message",
+    "time_in_seconds": 56.079,
+    "time_text": "00:56",
+    "author": {
+      "id": "auth_viewer_092",
+      "name": "viewer_092",
+      "display_name": "viewer_092"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000024",
+    "message": "SHEEEESH",
+    "message_type": "text_message",
+    "time_in_seconds": 56.247,
+    "time_text": "00:56",
+    "author": {
+      "id": "auth_viewer_153",
+      "name": "viewer_153",
+      "display_name": "viewer_153"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000025",
+    "message": "GTA VI MOMENT",
+    "message_type": "text_message",
+    "time_in_seconds": 56.517,
+    "time_text": "00:56",
+    "author": {
+      "id": "auth_viewer_053",
+      "name": "viewer_053",
+      "display_name": "viewer_053"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000026",
+    "message": "GTA VI MOMENT",
+    "message_type": "text_message",
+    "time_in_seconds": 57.091,
+    "time_text": "00:57",
+    "author": {
+      "id": "auth_viewer_052",
+      "name": "viewer_052",
+      "display_name": "viewer_052"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000027",
+    "message": "W GAMEPLAY",
+    "message_type": "text_message",
+    "time_in_seconds": 57.409,
+    "time_text": "00:57",
+    "author": {
+      "id": "auth_viewer_158",
+      "name": "viewer_158",
+      "display_name": "viewer_158"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000028",
+    "message": "CLIP THAT RIGHT NOW",
+    "message_type": "text_message",
+    "time_in_seconds": 57.416,
+    "time_text": "00:57",
+    "author": {
+      "id": "auth_viewer_147",
+      "name": "viewer_147",
+      "display_name": "viewer_147"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000029",
+    "message": "OMG WHAT A PLAY",
+    "message_type": "text_message",
+    "time_in_seconds": 57.75,
+    "time_text": "00:57",
+    "author": {
+      "id": "auth_viewer_016",
+      "name": "viewer_016",
+      "display_name": "viewer_016"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000030",
+    "message": "SHEEEESH",
+    "message_type": "text_message",
+    "time_in_seconds": 58.171,
+    "time_text": "00:58",
+    "author": {
+      "id": "auth_viewer_089",
+      "name": "viewer_089",
+      "display_name": "viewer_089"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000031",
+    "message": "W GAMEPLAY",
+    "message_type": "text_message",
+    "time_in_seconds": 58.734,
+    "time_text": "00:58",
+    "author": {
+      "id": "auth_viewer_026",
+      "name": "viewer_026",
+      "display_name": "viewer_026"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000032",
+    "message": "CLIP THAT RIGHT NOW",
+    "message_type": "text_message",
+    "time_in_seconds": 58.743,
+    "time_text": "00:58",
+    "author": {
+      "id": "auth_viewer_141",
+      "name": "viewer_141",
+      "display_name": "viewer_141"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000033",
+    "message": "LUL THAT WAS CRAZY",
+    "message_type": "text_message",
+    "time_in_seconds": 58.778,
+    "time_text": "00:58",
+    "author": {
+      "id": "auth_viewer_144",
+      "name": "viewer_144",
+      "display_name": "viewer_144"
+    },
+    "emotes": [
+      {
+        "name": "LUL"
+      },
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000034",
+    "message": "POG CHAT",
+    "message_type": "text_message",
+    "time_in_seconds": 58.868,
+    "time_text": "00:58",
+    "author": {
+      "id": "auth_viewer_161",
+      "name": "viewer_161",
+      "display_name": "viewer_161"
+    },
+    "emotes": [
+      {
+        "name": "POG"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000035",
+    "message": "INSANE MOVE!!",
+    "message_type": "text_message",
+    "time_in_seconds": 59.008,
+    "time_text": "00:59",
+    "author": {
+      "id": "auth_viewer_109",
+      "name": "viewer_109",
+      "display_name": "viewer_109"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000036",
+    "message": "HOLY CRAP",
+    "message_type": "text_message",
+    "time_in_seconds": 59.178,
+    "time_text": "00:59",
+    "author": {
+      "id": "auth_viewer_093",
+      "name": "viewer_093",
+      "display_name": "viewer_093"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000037",
+    "message": "GTA VI MOMENT",
+    "message_type": "text_message",
+    "time_in_seconds": 59.334,
+    "time_text": "00:59",
+    "author": {
+      "id": "auth_viewer_004",
+      "name": "viewer_004",
+      "display_name": "viewer_004"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000038",
+    "message": "GTA VI MOMENT",
+    "message_type": "text_message",
+    "time_in_seconds": 59.391,
+    "time_text": "00:59",
+    "author": {
+      "id": "auth_viewer_099",
+      "name": "viewer_099",
+      "display_name": "viewer_099"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000039",
+    "message": "W GAMEPLAY",
+    "message_type": "text_message",
+    "time_in_seconds": 59.422,
+    "time_text": "00:59",
+    "author": {
+      "id": "auth_viewer_132",
+      "name": "viewer_132",
+      "display_name": "viewer_132"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000040",
+    "message": "NO WAY HE SURVIVED THAT",
+    "message_type": "text_message",
+    "time_in_seconds": 59.514,
+    "time_text": "00:59",
+    "author": {
+      "id": "auth_viewer_062",
+      "name": "viewer_062",
+      "display_name": "viewer_062"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000041",
+    "message": "POG CHAT",
+    "message_type": "text_message",
+    "time_in_seconds": 61.072,
+    "time_text": "01:01",
+    "author": {
+      "id": "auth_viewer_028",
+      "name": "viewer_028",
+      "display_name": "viewer_028"
+    },
+    "emotes": [
+      {
+        "name": "POG"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000042",
+    "message": "NO WAY HE SURVIVED THAT",
+    "message_type": "text_message",
+    "time_in_seconds": 61.092,
+    "time_text": "01:01",
+    "author": {
+      "id": "auth_viewer_019",
+      "name": "viewer_019",
+      "display_name": "viewer_019"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000043",
+    "message": "OMG WHAT A PLAY",
+    "message_type": "text_message",
+    "time_in_seconds": 61.141,
+    "time_text": "01:01",
+    "author": {
+      "id": "auth_viewer_126",
+      "name": "viewer_126",
+      "display_name": "viewer_126"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000044",
+    "message": "W GAMEPLAY",
+    "message_type": "text_message",
+    "time_in_seconds": 61.184,
+    "time_text": "01:01",
+    "author": {
+      "id": "auth_viewer_151",
+      "name": "viewer_151",
+      "display_name": "viewer_151"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000045",
+    "message": "OMG WHAT A PLAY",
+    "message_type": "text_message",
+    "time_in_seconds": 61.305,
+    "time_text": "01:01",
+    "author": {
+      "id": "auth_viewer_157",
+      "name": "viewer_157",
+      "display_name": "viewer_157"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000046",
+    "message": "W GAMEPLAY",
+    "message_type": "text_message",
+    "time_in_seconds": 61.375,
+    "time_text": "01:01",
+    "author": {
+      "id": "auth_viewer_036",
+      "name": "viewer_036",
+      "display_name": "viewer_036"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000047",
+    "message": "LUL THAT WAS CRAZY",
+    "message_type": "text_message",
+    "time_in_seconds": 62.633,
+    "time_text": "01:02",
+    "author": {
+      "id": "auth_viewer_038",
+      "name": "viewer_038",
+      "display_name": "viewer_038"
+    },
+    "emotes": [
+      {
+        "name": "LUL"
+      },
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000048",
+    "message": "INSANE MOVE!!",
+    "message_type": "text_message",
+    "time_in_seconds": 62.694,
+    "time_text": "01:02",
+    "author": {
+      "id": "auth_viewer_132",
+      "name": "viewer_132",
+      "display_name": "viewer_132"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000049",
+    "message": "INSANE MOVE!!",
+    "message_type": "text_message",
+    "time_in_seconds": 62.877,
+    "time_text": "01:02",
+    "author": {
+      "id": "auth_viewer_135",
+      "name": "viewer_135",
+      "display_name": "viewer_135"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000050",
+    "message": "POG CHAT",
+    "message_type": "text_message",
+    "time_in_seconds": 63.238,
+    "time_text": "01:03",
+    "author": {
+      "id": "auth_viewer_035",
+      "name": "viewer_035",
+      "display_name": "viewer_035"
+    },
+    "emotes": [
+      {
+        "name": "POG"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000051",
+    "message": "INSANE MOVE!!",
+    "message_type": "text_message",
+    "time_in_seconds": 63.297,
+    "time_text": "01:03",
+    "author": {
+      "id": "auth_viewer_158",
+      "name": "viewer_158",
+      "display_name": "viewer_158"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000052",
+    "message": "SHEEEESH",
+    "message_type": "text_message",
+    "time_in_seconds": 63.368,
+    "time_text": "01:03",
+    "author": {
+      "id": "auth_viewer_060",
+      "name": "viewer_060",
+      "display_name": "viewer_060"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000053",
+    "message": "POG CHAT",
+    "message_type": "text_message",
+    "time_in_seconds": 63.396,
+    "time_text": "01:03",
+    "author": {
+      "id": "auth_viewer_197",
+      "name": "viewer_197",
+      "display_name": "viewer_197"
+    },
+    "emotes": [
+      {
+        "name": "POG"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000054",
+    "message": "LUL THAT WAS CRAZY",
+    "message_type": "text_message",
+    "time_in_seconds": 63.65,
+    "time_text": "01:03",
+    "author": {
+      "id": "auth_viewer_089",
+      "name": "viewer_089",
+      "display_name": "viewer_089"
+    },
+    "emotes": [
+      {
+        "name": "LUL"
+      },
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000055",
+    "message": "POG CHAT",
+    "message_type": "text_message",
+    "time_in_seconds": 63.661,
+    "time_text": "01:03",
+    "author": {
+      "id": "auth_viewer_122",
+      "name": "viewer_122",
+      "display_name": "viewer_122"
+    },
+    "emotes": [
+      {
+        "name": "POG"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000056",
+    "message": "OMG WHAT A PLAY",
+    "message_type": "text_message",
+    "time_in_seconds": 63.947,
+    "time_text": "01:03",
+    "author": {
+      "id": "auth_viewer_059",
+      "name": "viewer_059",
+      "display_name": "viewer_059"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000057",
+    "message": "SHEEEESH",
+    "message_type": "text_message",
+    "time_in_seconds": 64.005,
+    "time_text": "01:04",
+    "author": {
+      "id": "auth_viewer_031",
+      "name": "viewer_031",
+      "display_name": "viewer_031"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000058",
+    "message": "W GAMEPLAY",
+    "message_type": "text_message",
+    "time_in_seconds": 64.103,
+    "time_text": "01:04",
+    "author": {
+      "id": "auth_viewer_084",
+      "name": "viewer_084",
+      "display_name": "viewer_084"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000059",
+    "message": "GTA VI MOMENT",
+    "message_type": "text_message",
+    "time_in_seconds": 64.895,
+    "time_text": "01:04",
+    "author": {
+      "id": "auth_viewer_093",
+      "name": "viewer_093",
+      "display_name": "viewer_093"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000060",
+    "message": "OMG WHAT A PLAY",
+    "message_type": "text_message",
+    "time_in_seconds": 65.162,
+    "time_text": "01:05",
+    "author": {
+      "id": "auth_viewer_013",
+      "name": "viewer_013",
+      "display_name": "viewer_013"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000061",
+    "message": "W GAMEPLAY",
+    "message_type": "text_message",
+    "time_in_seconds": 65.223,
+    "time_text": "01:05",
+    "author": {
+      "id": "auth_viewer_055",
+      "name": "viewer_055",
+      "display_name": "viewer_055"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000062",
+    "message": "W GAMEPLAY",
+    "message_type": "text_message",
+    "time_in_seconds": 65.3,
+    "time_text": "01:05",
+    "author": {
+      "id": "auth_viewer_134",
+      "name": "viewer_134",
+      "display_name": "viewer_134"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000063",
+    "message": "SHEEEESH",
+    "message_type": "text_message",
+    "time_in_seconds": 65.479,
+    "time_text": "01:05",
+    "author": {
+      "id": "auth_viewer_088",
+      "name": "viewer_088",
+      "display_name": "viewer_088"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000064",
+    "message": "POG CHAT",
+    "message_type": "text_message",
+    "time_in_seconds": 65.568,
+    "time_text": "01:05",
+    "author": {
+      "id": "auth_viewer_033",
+      "name": "viewer_033",
+      "display_name": "viewer_033"
+    },
+    "emotes": [
+      {
+        "name": "POG"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000065",
+    "message": "W GAMEPLAY",
+    "message_type": "text_message",
+    "time_in_seconds": 65.615,
+    "time_text": "01:05",
+    "author": {
+      "id": "auth_viewer_108",
+      "name": "viewer_108",
+      "display_name": "viewer_108"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000066",
+    "message": "CLIP THAT RIGHT NOW",
+    "message_type": "text_message",
+    "time_in_seconds": 65.678,
+    "time_text": "01:05",
+    "author": {
+      "id": "auth_viewer_161",
+      "name": "viewer_161",
+      "display_name": "viewer_161"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000067",
+    "message": "LUL THAT WAS CRAZY",
+    "message_type": "text_message",
+    "time_in_seconds": 65.721,
+    "time_text": "01:05",
+    "author": {
+      "id": "auth_viewer_190",
+      "name": "viewer_190",
+      "display_name": "viewer_190"
+    },
+    "emotes": [
+      {
+        "name": "LUL"
+      },
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000068",
+    "message": "POG CHAT",
+    "message_type": "text_message",
+    "time_in_seconds": 65.738,
+    "time_text": "01:05",
+    "author": {
+      "id": "auth_viewer_109",
+      "name": "viewer_109",
+      "display_name": "viewer_109"
+    },
+    "emotes": [
+      {
+        "name": "POG"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000069",
+    "message": "W GAMEPLAY",
+    "message_type": "text_message",
+    "time_in_seconds": 66.095,
+    "time_text": "01:06",
+    "author": {
+      "id": "auth_viewer_170",
+      "name": "viewer_170",
+      "display_name": "viewer_170"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000070",
+    "message": "OMG WHAT A PLAY",
+    "message_type": "text_message",
+    "time_in_seconds": 66.455,
+    "time_text": "01:06",
+    "author": {
+      "id": "auth_viewer_057",
+      "name": "viewer_057",
+      "display_name": "viewer_057"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000071",
+    "message": "HOLY CRAP",
+    "message_type": "text_message",
+    "time_in_seconds": 66.553,
+    "time_text": "01:06",
+    "author": {
+      "id": "auth_viewer_073",
+      "name": "viewer_073",
+      "display_name": "viewer_073"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000072",
+    "message": "HOLY CRAP",
+    "message_type": "text_message",
+    "time_in_seconds": 66.645,
+    "time_text": "01:06",
+    "author": {
+      "id": "auth_viewer_002",
+      "name": "viewer_002",
+      "display_name": "viewer_002"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000073",
+    "message": "INSANE MOVE!!",
+    "message_type": "text_message",
+    "time_in_seconds": 66.654,
+    "time_text": "01:06",
+    "author": {
+      "id": "auth_viewer_109",
+      "name": "viewer_109",
+      "display_name": "viewer_109"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000074",
+    "message": "POG CHAT",
+    "message_type": "text_message",
+    "time_in_seconds": 67.068,
+    "time_text": "01:07",
+    "author": {
+      "id": "auth_viewer_061",
+      "name": "viewer_061",
+      "display_name": "viewer_061"
+    },
+    "emotes": [
+      {
+        "name": "POG"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000075",
+    "message": "INSANE MOVE!!",
+    "message_type": "text_message",
+    "time_in_seconds": 67.172,
+    "time_text": "01:07",
+    "author": {
+      "id": "auth_viewer_063",
+      "name": "viewer_063",
+      "display_name": "viewer_063"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000076",
+    "message": "NO WAY HE SURVIVED THAT",
+    "message_type": "text_message",
+    "time_in_seconds": 67.862,
+    "time_text": "01:07",
+    "author": {
+      "id": "auth_viewer_133",
+      "name": "viewer_133",
+      "display_name": "viewer_133"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000077",
+    "message": "CLIP THAT RIGHT NOW",
+    "message_type": "text_message",
+    "time_in_seconds": 68.535,
+    "time_text": "01:08",
+    "author": {
+      "id": "auth_viewer_024",
+      "name": "viewer_024",
+      "display_name": "viewer_024"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000078",
+    "message": "NO WAY HE SURVIVED THAT",
+    "message_type": "text_message",
+    "time_in_seconds": 69.35,
+    "time_text": "01:09",
+    "author": {
+      "id": "auth_viewer_049",
+      "name": "viewer_049",
+      "display_name": "viewer_049"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000079",
+    "message": "GTA VI MOMENT",
+    "message_type": "text_message",
+    "time_in_seconds": 69.414,
+    "time_text": "01:09",
+    "author": {
+      "id": "auth_viewer_146",
+      "name": "viewer_146",
+      "display_name": "viewer_146"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000080",
+    "message": "GTA VI MOMENT",
+    "message_type": "text_message",
+    "time_in_seconds": 69.512,
+    "time_text": "01:09",
+    "author": {
+      "id": "auth_viewer_187",
+      "name": "viewer_187",
+      "display_name": "viewer_187"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000081",
+    "message": "HOLY CRAP",
+    "message_type": "text_message",
+    "time_in_seconds": 410.279,
+    "time_text": "06:50",
+    "author": {
+      "id": "auth_viewer_058",
+      "name": "viewer_058",
+      "display_name": "viewer_058"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000082",
+    "message": "GTA VI MOMENT",
+    "message_type": "text_message",
+    "time_in_seconds": 410.357,
+    "time_text": "06:50",
+    "author": {
+      "id": "auth_viewer_050",
+      "name": "viewer_050",
+      "display_name": "viewer_050"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000083",
+    "message": "CLIP THAT RIGHT NOW",
+    "message_type": "text_message",
+    "time_in_seconds": 410.497,
+    "time_text": "06:50",
+    "author": {
+      "id": "auth_viewer_093",
+      "name": "viewer_093",
+      "display_name": "viewer_093"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000084",
+    "message": "POG CHAT",
+    "message_type": "text_message",
+    "time_in_seconds": 410.748,
+    "time_text": "06:50",
+    "author": {
+      "id": "auth_viewer_067",
+      "name": "viewer_067",
+      "display_name": "viewer_067"
+    },
+    "emotes": [
+      {
+        "name": "POG"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000085",
+    "message": "NO WAY HE SURVIVED THAT",
+    "message_type": "text_message",
+    "time_in_seconds": 410.898,
+    "time_text": "06:50",
+    "author": {
+      "id": "auth_viewer_153",
+      "name": "viewer_153",
+      "display_name": "viewer_153"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000086",
+    "message": "HOLY CRAP",
+    "message_type": "text_message",
+    "time_in_seconds": 411.889,
+    "time_text": "06:51",
+    "author": {
+      "id": "auth_viewer_186",
+      "name": "viewer_186",
+      "display_name": "viewer_186"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000087",
+    "message": "NO WAY HE SURVIVED THAT",
+    "message_type": "text_message",
+    "time_in_seconds": 412.118,
+    "time_text": "06:52",
+    "author": {
+      "id": "auth_viewer_150",
+      "name": "viewer_150",
+      "display_name": "viewer_150"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000088",
+    "message": "W GAMEPLAY",
+    "message_type": "text_message",
+    "time_in_seconds": 412.155,
+    "time_text": "06:52",
+    "author": {
+      "id": "auth_viewer_058",
+      "name": "viewer_058",
+      "display_name": "viewer_058"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000089",
+    "message": "LUL THAT WAS CRAZY",
+    "message_type": "text_message",
+    "time_in_seconds": 412.183,
+    "time_text": "06:52",
+    "author": {
+      "id": "auth_viewer_024",
+      "name": "viewer_024",
+      "display_name": "viewer_024"
+    },
+    "emotes": [
+      {
+        "name": "LUL"
+      },
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000090",
+    "message": "W GAMEPLAY",
+    "message_type": "text_message",
+    "time_in_seconds": 412.437,
+    "time_text": "06:52",
+    "author": {
+      "id": "auth_viewer_185",
+      "name": "viewer_185",
+      "display_name": "viewer_185"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000091",
+    "message": "NO WAY HE SURVIVED THAT",
+    "message_type": "text_message",
+    "time_in_seconds": 412.455,
+    "time_text": "06:52",
+    "author": {
+      "id": "auth_viewer_023",
+      "name": "viewer_023",
+      "display_name": "viewer_023"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000092",
+    "message": "HOLY CRAP",
+    "message_type": "text_message",
+    "time_in_seconds": 412.475,
+    "time_text": "06:52",
+    "author": {
+      "id": "auth_viewer_192",
+      "name": "viewer_192",
+      "display_name": "viewer_192"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000093",
+    "message": "W GAMEPLAY",
+    "message_type": "text_message",
+    "time_in_seconds": 412.621,
+    "time_text": "06:52",
+    "author": {
+      "id": "auth_viewer_055",
+      "name": "viewer_055",
+      "display_name": "viewer_055"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000094",
+    "message": "CLIP THAT RIGHT NOW",
+    "message_type": "text_message",
+    "time_in_seconds": 412.636,
+    "time_text": "06:52",
+    "author": {
+      "id": "auth_viewer_106",
+      "name": "viewer_106",
+      "display_name": "viewer_106"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000095",
+    "message": "CLIP THAT RIGHT NOW",
+    "message_type": "text_message",
+    "time_in_seconds": 412.807,
+    "time_text": "06:52",
+    "author": {
+      "id": "auth_viewer_054",
+      "name": "viewer_054",
+      "display_name": "viewer_054"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000096",
+    "message": "GTA VI MOMENT",
+    "message_type": "text_message",
+    "time_in_seconds": 412.878,
+    "time_text": "06:52",
+    "author": {
+      "id": "auth_viewer_198",
+      "name": "viewer_198",
+      "display_name": "viewer_198"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000097",
+    "message": "HOLY CRAP",
+    "message_type": "text_message",
+    "time_in_seconds": 413.066,
+    "time_text": "06:53",
+    "author": {
+      "id": "auth_viewer_168",
+      "name": "viewer_168",
+      "display_name": "viewer_168"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000098",
+    "message": "INSANE MOVE!!",
+    "message_type": "text_message",
+    "time_in_seconds": 413.292,
+    "time_text": "06:53",
+    "author": {
+      "id": "auth_viewer_191",
+      "name": "viewer_191",
+      "display_name": "viewer_191"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000099",
+    "message": "OMG WHAT A PLAY",
+    "message_type": "text_message",
+    "time_in_seconds": 413.585,
+    "time_text": "06:53",
+    "author": {
+      "id": "auth_viewer_176",
+      "name": "viewer_176",
+      "display_name": "viewer_176"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000100",
+    "message": "POG CHAT",
+    "message_type": "text_message",
+    "time_in_seconds": 413.929,
+    "time_text": "06:53",
+    "author": {
+      "id": "auth_viewer_095",
+      "name": "viewer_095",
+      "display_name": "viewer_095"
+    },
+    "emotes": [
+      {
+        "name": "POG"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000101",
+    "message": "INSANE MOVE!!",
+    "message_type": "text_message",
+    "time_in_seconds": 413.996,
+    "time_text": "06:53",
+    "author": {
+      "id": "auth_viewer_072",
+      "name": "viewer_072",
+      "display_name": "viewer_072"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000102",
+    "message": "HOLY CRAP",
+    "message_type": "text_message",
+    "time_in_seconds": 414.593,
+    "time_text": "06:54",
+    "author": {
+      "id": "auth_viewer_039",
+      "name": "viewer_039",
+      "display_name": "viewer_039"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000103",
+    "message": "LUL THAT WAS CRAZY",
+    "message_type": "text_message",
+    "time_in_seconds": 414.604,
+    "time_text": "06:54",
+    "author": {
+      "id": "auth_viewer_064",
+      "name": "viewer_064",
+      "display_name": "viewer_064"
+    },
+    "emotes": [
+      {
+        "name": "LUL"
+      },
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000104",
+    "message": "INSANE MOVE!!",
+    "message_type": "text_message",
+    "time_in_seconds": 414.819,
+    "time_text": "06:54",
+    "author": {
+      "id": "auth_viewer_184",
+      "name": "viewer_184",
+      "display_name": "viewer_184"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000105",
+    "message": "SHEEEESH",
+    "message_type": "text_message",
+    "time_in_seconds": 415.119,
+    "time_text": "06:55",
+    "author": {
+      "id": "auth_viewer_183",
+      "name": "viewer_183",
+      "display_name": "viewer_183"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000106",
+    "message": "INSANE MOVE!!",
+    "message_type": "text_message",
+    "time_in_seconds": 415.249,
+    "time_text": "06:55",
+    "author": {
+      "id": "auth_viewer_120",
+      "name": "viewer_120",
+      "display_name": "viewer_120"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000107",
+    "message": "CLIP THAT RIGHT NOW",
+    "message_type": "text_message",
+    "time_in_seconds": 415.729,
+    "time_text": "06:55",
+    "author": {
+      "id": "auth_viewer_032",
+      "name": "viewer_032",
+      "display_name": "viewer_032"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000108",
+    "message": "INSANE MOVE!!",
+    "message_type": "text_message",
+    "time_in_seconds": 415.818,
+    "time_text": "06:55",
+    "author": {
+      "id": "auth_viewer_115",
+      "name": "viewer_115",
+      "display_name": "viewer_115"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000109",
+    "message": "INSANE MOVE!!",
+    "message_type": "text_message",
+    "time_in_seconds": 416.019,
+    "time_text": "06:56",
+    "author": {
+      "id": "auth_viewer_091",
+      "name": "viewer_091",
+      "display_name": "viewer_091"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000110",
+    "message": "OMG WHAT A PLAY",
+    "message_type": "text_message",
+    "time_in_seconds": 416.206,
+    "time_text": "06:56",
+    "author": {
+      "id": "auth_viewer_108",
+      "name": "viewer_108",
+      "display_name": "viewer_108"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000111",
+    "message": "OMG WHAT A PLAY",
+    "message_type": "text_message",
+    "time_in_seconds": 416.319,
+    "time_text": "06:56",
+    "author": {
+      "id": "auth_viewer_142",
+      "name": "viewer_142",
+      "display_name": "viewer_142"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000112",
+    "message": "INSANE MOVE!!",
+    "message_type": "text_message",
+    "time_in_seconds": 416.343,
+    "time_text": "06:56",
+    "author": {
+      "id": "auth_viewer_039",
+      "name": "viewer_039",
+      "display_name": "viewer_039"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000113",
+    "message": "OMG WHAT A PLAY",
+    "message_type": "text_message",
+    "time_in_seconds": 417.418,
+    "time_text": "06:57",
+    "author": {
+      "id": "auth_viewer_166",
+      "name": "viewer_166",
+      "display_name": "viewer_166"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000114",
+    "message": "POG CHAT",
+    "message_type": "text_message",
+    "time_in_seconds": 417.473,
+    "time_text": "06:57",
+    "author": {
+      "id": "auth_viewer_086",
+      "name": "viewer_086",
+      "display_name": "viewer_086"
+    },
+    "emotes": [
+      {
+        "name": "POG"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000115",
+    "message": "NO WAY HE SURVIVED THAT",
+    "message_type": "text_message",
+    "time_in_seconds": 417.952,
+    "time_text": "06:57",
+    "author": {
+      "id": "auth_viewer_103",
+      "name": "viewer_103",
+      "display_name": "viewer_103"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000116",
+    "message": "LUL THAT WAS CRAZY",
+    "message_type": "text_message",
+    "time_in_seconds": 418.382,
+    "time_text": "06:58",
+    "author": {
+      "id": "auth_viewer_160",
+      "name": "viewer_160",
+      "display_name": "viewer_160"
+    },
+    "emotes": [
+      {
+        "name": "LUL"
+      },
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000117",
+    "message": "LUL THAT WAS CRAZY",
+    "message_type": "text_message",
+    "time_in_seconds": 418.702,
+    "time_text": "06:58",
+    "author": {
+      "id": "auth_viewer_165",
+      "name": "viewer_165",
+      "display_name": "viewer_165"
+    },
+    "emotes": [
+      {
+        "name": "LUL"
+      },
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000118",
+    "message": "POG CHAT",
+    "message_type": "text_message",
+    "time_in_seconds": 419.348,
+    "time_text": "06:59",
+    "author": {
+      "id": "auth_viewer_196",
+      "name": "viewer_196",
+      "display_name": "viewer_196"
+    },
+    "emotes": [
+      {
+        "name": "POG"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000119",
+    "message": "HOLY CRAP",
+    "message_type": "text_message",
+    "time_in_seconds": 419.772,
+    "time_text": "06:59",
+    "author": {
+      "id": "auth_viewer_147",
+      "name": "viewer_147",
+      "display_name": "viewer_147"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000120",
+    "message": "HOLY CRAP",
+    "message_type": "text_message",
+    "time_in_seconds": 420.015,
+    "time_text": "07:00",
+    "author": {
+      "id": "auth_viewer_158",
+      "name": "viewer_158",
+      "display_name": "viewer_158"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000121",
+    "message": "OMG WHAT A PLAY",
+    "message_type": "text_message",
+    "time_in_seconds": 420.127,
+    "time_text": "07:00",
+    "author": {
+      "id": "auth_viewer_107",
+      "name": "viewer_107",
+      "display_name": "viewer_107"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000122",
+    "message": "INSANE MOVE!!",
+    "message_type": "text_message",
+    "time_in_seconds": 420.301,
+    "time_text": "07:00",
+    "author": {
+      "id": "auth_viewer_099",
+      "name": "viewer_099",
+      "display_name": "viewer_099"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000123",
+    "message": "CLIP THAT RIGHT NOW",
+    "message_type": "text_message",
+    "time_in_seconds": 420.377,
+    "time_text": "07:00",
+    "author": {
+      "id": "auth_viewer_177",
+      "name": "viewer_177",
+      "display_name": "viewer_177"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000124",
+    "message": "CLIP THAT RIGHT NOW",
+    "message_type": "text_message",
+    "time_in_seconds": 421.097,
+    "time_text": "07:01",
+    "author": {
+      "id": "auth_viewer_046",
+      "name": "viewer_046",
+      "display_name": "viewer_046"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000125",
+    "message": "POG CHAT",
+    "message_type": "text_message",
+    "time_in_seconds": 421.104,
+    "time_text": "07:01",
+    "author": {
+      "id": "auth_viewer_128",
+      "name": "viewer_128",
+      "display_name": "viewer_128"
+    },
+    "emotes": [
+      {
+        "name": "POG"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000126",
+    "message": "W GAMEPLAY",
+    "message_type": "text_message",
+    "time_in_seconds": 421.622,
+    "time_text": "07:01",
+    "author": {
+      "id": "auth_viewer_189",
+      "name": "viewer_189",
+      "display_name": "viewer_189"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000127",
+    "message": "OMG WHAT A PLAY",
+    "message_type": "text_message",
+    "time_in_seconds": 421.921,
+    "time_text": "07:01",
+    "author": {
+      "id": "auth_viewer_057",
+      "name": "viewer_057",
+      "display_name": "viewer_057"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000128",
+    "message": "LUL THAT WAS CRAZY",
+    "message_type": "text_message",
+    "time_in_seconds": 421.988,
+    "time_text": "07:01",
+    "author": {
+      "id": "auth_viewer_002",
+      "name": "viewer_002",
+      "display_name": "viewer_002"
+    },
+    "emotes": [
+      {
+        "name": "LUL"
+      },
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000129",
+    "message": "POG CHAT",
+    "message_type": "text_message",
+    "time_in_seconds": 422.68,
+    "time_text": "07:02",
+    "author": {
+      "id": "auth_viewer_185",
+      "name": "viewer_185",
+      "display_name": "viewer_185"
+    },
+    "emotes": [
+      {
+        "name": "POG"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000130",
+    "message": "INSANE MOVE!!",
+    "message_type": "text_message",
+    "time_in_seconds": 423.233,
+    "time_text": "07:03",
+    "author": {
+      "id": "auth_viewer_178",
+      "name": "viewer_178",
+      "display_name": "viewer_178"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000131",
+    "message": "HOLY CRAP",
+    "message_type": "text_message",
+    "time_in_seconds": 423.257,
+    "time_text": "07:03",
+    "author": {
+      "id": "auth_viewer_019",
+      "name": "viewer_019",
+      "display_name": "viewer_019"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000132",
+    "message": "OMG WHAT A PLAY",
+    "message_type": "text_message",
+    "time_in_seconds": 423.553,
+    "time_text": "07:03",
+    "author": {
+      "id": "auth_viewer_022",
+      "name": "viewer_022",
+      "display_name": "viewer_022"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000133",
+    "message": "SHEEEESH",
+    "message_type": "text_message",
+    "time_in_seconds": 423.885,
+    "time_text": "07:03",
+    "author": {
+      "id": "auth_viewer_081",
+      "name": "viewer_081",
+      "display_name": "viewer_081"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000134",
+    "message": "OMG WHAT A PLAY",
+    "message_type": "text_message",
+    "time_in_seconds": 424.308,
+    "time_text": "07:04",
+    "author": {
+      "id": "auth_viewer_138",
+      "name": "viewer_138",
+      "display_name": "viewer_138"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000135",
+    "message": "HOLY CRAP",
+    "message_type": "text_message",
+    "time_in_seconds": 424.78,
+    "time_text": "07:04",
+    "author": {
+      "id": "auth_viewer_167",
+      "name": "viewer_167",
+      "display_name": "viewer_167"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000136",
+    "message": "SHEEEESH",
+    "message_type": "text_message",
+    "time_in_seconds": 424.936,
+    "time_text": "07:04",
+    "author": {
+      "id": "auth_viewer_160",
+      "name": "viewer_160",
+      "display_name": "viewer_160"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000137",
+    "message": "SHEEEESH",
+    "message_type": "text_message",
+    "time_in_seconds": 424.972,
+    "time_text": "07:04",
+    "author": {
+      "id": "auth_viewer_048",
+      "name": "viewer_048",
+      "display_name": "viewer_048"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000138",
+    "message": "HOLY CRAP",
+    "message_type": "text_message",
+    "time_in_seconds": 425.44,
+    "time_text": "07:05",
+    "author": {
+      "id": "auth_viewer_064",
+      "name": "viewer_064",
+      "display_name": "viewer_064"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000139",
+    "message": "GTA VI MOMENT",
+    "message_type": "text_message",
+    "time_in_seconds": 425.548,
+    "time_text": "07:05",
+    "author": {
+      "id": "auth_viewer_116",
+      "name": "viewer_116",
+      "display_name": "viewer_116"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000140",
+    "message": "NO WAY HE SURVIVED THAT",
+    "message_type": "text_message",
+    "time_in_seconds": 425.695,
+    "time_text": "07:05",
+    "author": {
+      "id": "auth_viewer_125",
+      "name": "viewer_125",
+      "display_name": "viewer_125"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000141",
+    "message": "GTA VI MOMENT",
+    "message_type": "text_message",
+    "time_in_seconds": 426.082,
+    "time_text": "07:06",
+    "author": {
+      "id": "auth_viewer_123",
+      "name": "viewer_123",
+      "display_name": "viewer_123"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000142",
+    "message": "INSANE MOVE!!",
+    "message_type": "text_message",
+    "time_in_seconds": 426.087,
+    "time_text": "07:06",
+    "author": {
+      "id": "auth_viewer_148",
+      "name": "viewer_148",
+      "display_name": "viewer_148"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000143",
+    "message": "POG CHAT",
+    "message_type": "text_message",
+    "time_in_seconds": 426.165,
+    "time_text": "07:06",
+    "author": {
+      "id": "auth_viewer_165",
+      "name": "viewer_165",
+      "display_name": "viewer_165"
+    },
+    "emotes": [
+      {
+        "name": "POG"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000144",
+    "message": "POG CHAT",
+    "message_type": "text_message",
+    "time_in_seconds": 426.596,
+    "time_text": "07:06",
+    "author": {
+      "id": "auth_viewer_065",
+      "name": "viewer_065",
+      "display_name": "viewer_065"
+    },
+    "emotes": [
+      {
+        "name": "POG"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000145",
+    "message": "HOLY CRAP",
+    "message_type": "text_message",
+    "time_in_seconds": 426.622,
+    "time_text": "07:06",
+    "author": {
+      "id": "auth_viewer_193",
+      "name": "viewer_193",
+      "display_name": "viewer_193"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000146",
+    "message": "W GAMEPLAY",
+    "message_type": "text_message",
+    "time_in_seconds": 427.491,
+    "time_text": "07:07",
+    "author": {
+      "id": "auth_viewer_166",
+      "name": "viewer_166",
+      "display_name": "viewer_166"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000147",
+    "message": "LUL THAT WAS CRAZY",
+    "message_type": "text_message",
+    "time_in_seconds": 427.816,
+    "time_text": "07:07",
+    "author": {
+      "id": "auth_viewer_157",
+      "name": "viewer_157",
+      "display_name": "viewer_157"
+    },
+    "emotes": [
+      {
+        "name": "LUL"
+      },
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000148",
+    "message": "NO WAY HE SURVIVED THAT",
+    "message_type": "text_message",
+    "time_in_seconds": 427.834,
+    "time_text": "07:07",
+    "author": {
+      "id": "auth_viewer_137",
+      "name": "viewer_137",
+      "display_name": "viewer_137"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000149",
+    "message": "CLIP THAT RIGHT NOW",
+    "message_type": "text_message",
+    "time_in_seconds": 427.869,
+    "time_text": "07:07",
+    "author": {
+      "id": "auth_viewer_050",
+      "name": "viewer_050",
+      "display_name": "viewer_050"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000150",
+    "message": "INSANE MOVE!!",
+    "message_type": "text_message",
+    "time_in_seconds": 428.32,
+    "time_text": "07:08",
+    "author": {
+      "id": "auth_viewer_013",
+      "name": "viewer_013",
+      "display_name": "viewer_013"
+    },
+    "emotes": []
+  },
+  {
+    "message_id": "msg_000151",
+    "message": "W GAMEPLAY",
+    "message_type": "text_message",
+    "time_in_seconds": 428.496,
+    "time_text": "07:08",
+    "author": {
+      "id": "auth_viewer_087",
+      "name": "viewer_087",
+      "display_name": "viewer_087"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000152",
+    "message": "W GAMEPLAY",
+    "message_type": "text_message",
+    "time_in_seconds": 428.551,
+    "time_text": "07:08",
+    "author": {
+      "id": "auth_viewer_033",
+      "name": "viewer_033",
+      "display_name": "viewer_033"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000153",
+    "message": "CLIP THAT RIGHT NOW",
+    "message_type": "text_message",
+    "time_in_seconds": 428.66,
+    "time_text": "07:08",
+    "author": {
+      "id": "auth_viewer_121",
+      "name": "viewer_121",
+      "display_name": "viewer_121"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000154",
+    "message": "LUL THAT WAS CRAZY",
+    "message_type": "text_message",
+    "time_in_seconds": 428.721,
+    "time_text": "07:08",
+    "author": {
+      "id": "auth_viewer_068",
+      "name": "viewer_068",
+      "display_name": "viewer_068"
+    },
+    "emotes": [
+      {
+        "name": "LUL"
+      },
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000155",
+    "message": "LUL THAT WAS CRAZY",
+    "message_type": "text_message",
+    "time_in_seconds": 428.736,
+    "time_text": "07:08",
+    "author": {
+      "id": "auth_viewer_101",
+      "name": "viewer_101",
+      "display_name": "viewer_101"
+    },
+    "emotes": [
+      {
+        "name": "LUL"
+      },
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000156",
+    "message": "LUL THAT WAS CRAZY",
+    "message_type": "text_message",
+    "time_in_seconds": 429.058,
+    "time_text": "07:09",
+    "author": {
+      "id": "auth_viewer_147",
+      "name": "viewer_147",
+      "display_name": "viewer_147"
+    },
+    "emotes": [
+      {
+        "name": "LUL"
+      },
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000157",
+    "message": "LUL THAT WAS CRAZY",
+    "message_type": "text_message",
+    "time_in_seconds": 429.112,
+    "time_text": "07:09",
+    "author": {
+      "id": "auth_viewer_087",
+      "name": "viewer_087",
+      "display_name": "viewer_087"
+    },
+    "emotes": [
+      {
+        "name": "LUL"
+      },
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000158",
+    "message": "NO WAY HE SURVIVED THAT",
+    "message_type": "text_message",
+    "time_in_seconds": 429.325,
+    "time_text": "07:09",
+    "author": {
+      "id": "auth_viewer_037",
+      "name": "viewer_037",
+      "display_name": "viewer_037"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000159",
+    "message": "CLIP THAT RIGHT NOW",
+    "message_type": "text_message",
+    "time_in_seconds": 429.437,
+    "time_text": "07:09",
+    "author": {
+      "id": "auth_viewer_047",
+      "name": "viewer_047",
+      "display_name": "viewer_047"
+    },
+    "emotes": [
+      {
+        "name": "W"
+      }
+    ]
+  },
+  {
+    "message_id": "msg_000160",
+    "message": "SHEEEESH",
+    "message_type": "text_message",
+    "time_in_seconds": 429.848,
+    "time_text": "07:09",
+    "author": {
+      "id": "auth_viewer_158",
+      "name": "viewer_158",
+      "display_name": "viewer_158"
+    },
+    "emotes": []
+  }
+]
