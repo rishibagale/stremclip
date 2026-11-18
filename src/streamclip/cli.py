@@ -1,4 +1,4 @@
-"""Command-line interface skeleton for streamclip."""
+"""Command-line interface for streamclip: run, detect, render, eval, and tune."""
 
 from __future__ import annotations
 
@@ -7,6 +7,9 @@ from pathlib import Path
 from typing import Annotated, Literal
 
 import typer
+from rich.console import Console
+from rich.panel import Panel
+from rich.table import Table
 
 from streamclip.config import Config
 from streamclip.eval.labels import load_labels
@@ -16,6 +19,13 @@ from streamclip.fusion import fuse_signals
 from streamclip.ingest.chat import parse_chat
 from streamclip.ingest.video import probe
 from streamclip.models import Candidate
+from streamclip.pipeline import (
+    PipelineError,
+    PipelineOptions,
+    detect_candidates,
+    render_from_candidates,
+    run_pipeline,
+)
 from streamclip.signals.audio import extract_audio_signal, silence_points
 from streamclip.signals.chat import extract_chat_signal
 
@@ -24,21 +34,372 @@ app = typer.Typer(
     help="Livestream VOD highlight clips extractor targeting vertical 1080x1920 video.",
     no_args_is_help=True,
 )
+console = Console()
 
 
 @app.command()
-def run() -> None:
-    """Run end-to-end highlight extraction pipeline."""
+def run(
+    video: Annotated[
+        str | None,
+        typer.Argument(
+            help="Path or URL to input livestream VOD.",
+        ),
+    ] = None,
+    chat: Annotated[
+        Path | None,
+        typer.Option(
+            "--chat",
+            "-c",
+            help="Path to chat replay file (Twitch JSON, chat-downloader, or CSV).",
+            dir_okay=False,
+        ),
+    ] = None,
+    out_dir: Annotated[
+        Path,
+        typer.Option(
+            "--out-dir",
+            "-o",
+            help="Output directory for rendered clips and pipeline artifacts.",
+        ),
+    ] = Path("output"),
+    config: Annotated[
+        Path | None,
+        typer.Option(
+            "--config",
+            help="Path to configuration YAML file.",
+            dir_okay=False,
+        ),
+    ] = None,
+    no_llm: Annotated[
+        bool,
+        typer.Option(
+            "--no-llm",
+            help="Disable LLM reranking and use fast heuristic scoring.",
+        ),
+    ] = False,
+    no_vision: Annotated[
+        bool,
+        typer.Option(
+            "--no-vision",
+            help="Disable visual motion/action scoring.",
+        ),
+    ] = False,
+    dry_run: Annotated[
+        bool,
+        typer.Option(
+            "--dry-run",
+            help="Print plan and estimated LLM cost without encoding.",
+        ),
+    ] = False,
+    top_k: Annotated[
+        int | None,
+        typer.Option(
+            "--top-k",
+            "-k",
+            help="Number of top highlight clips to extract.",
+        ),
+    ] = None,
+    layout: Annotated[
+        str,
+        typer.Option(
+            "--layout",
+            help="Vertical layout: 'gameplay_only', 'stack', or 'facecam_only'.",
+        ),
+    ] = "gameplay_only",
+    max_workers: Annotated[
+        int,
+        typer.Option(
+            "--max-workers",
+            "-w",
+            help="Maximum concurrent rendering workers.",
+        ),
+    ] = 2,
+) -> None:
+    """Run end-to-end highlight extraction, reranking, and vertical rendering pipeline."""
+    if video is None:
+        console.print("[yellow]Usage: streamclip run <video_path_or_url> [options][/yellow]")
+        console.print("Run 'streamclip run --help' for all available options.")
+        return
+
+    cfg = Config.from_yaml(config) if config else Config()
+    options = PipelineOptions(
+        video=video,
+        chat=chat,
+        out_dir=out_dir,
+        config=cfg,
+        no_llm=no_llm,
+        no_vision=no_vision,
+        dry_run=dry_run,
+        top_k=top_k,
+        layout=layout,
+        max_workers=max_workers,
+    )
+
+    if dry_run:
+        console.print(
+            Panel.fit("[bold cyan]streamclip Dry Run Plan[/bold cyan]", border_style="cyan")
+        )
+
+    try:
+        with console.status("[bold green]Executing streamclip pipeline...[/bold green]"):
+            result = run_pipeline(options)
+    except PipelineError as err:
+        console.print(f"[bold red]Pipeline Error:[/bold red] {err}")
+        raise typer.Exit(code=1) from None
+    except Exception as err:
+        console.print(f"[bold red]Unexpected Error:[/bold red] {err}")
+        raise typer.Exit(code=1) from None
+
+    if dry_run and result.dry_run_plan:
+        plan = result.dry_run_plan
+        console.print(f"VOD Source: [bold]{plan['vod']['path']}[/bold]")
+        console.print(f"Duration: {plan['vod']['duration_s']}s ({plan['vod']['resolution']})")
+        console.print(f"Candidates Detected: {plan['candidates_detected']}")
+        console.print(f"Top-K Highlights: {plan['top_k_selected']}")
+        console.print(f"LLM Enabled: {plan['llm_eval_enabled']}")
+        cost_str = f"${plan['estimated_llm_cost_usd']:.4f}"
+        console.print(f"Estimated LLM Cost: [bold green]{cost_str}[/bold green]")
+        console.print(f"Layout: {plan['render_layout']} ({plan['target_resolution']})")
+
+        table = Table(title="Planned Highlight Clips")
+        table.add_column("Rank", justify="right")
+        table.add_column("Title")
+        table.add_column("Start", justify="right")
+        table.add_column("End", justify="right")
+        table.add_column("Duration", justify="right")
+        table.add_column("Score", justify="right")
+        for clip_info in plan["clips"]:
+            table.add_row(
+                str(clip_info["rank"]),
+                clip_info["title"],
+                f"{clip_info['start']}s",
+                f"{clip_info['end']}s",
+                f"{clip_info['duration']}s",
+                f"{clip_info['score']}",
+            )
+        console.print(table)
+        return
+
+    console.print(f"[bold green]Pipeline completed successfully![/bold green] Output: {out_dir}")
+    table = Table(title=f"Extracted Highlights (Top {len(result.ranked_clips)})")
+    table.add_column("Rank", justify="right")
+    table.add_column("Title")
+    table.add_column("Window", justify="center")
+    table.add_column("Score", justify="right")
+    table.add_column("File")
+
+    for i, clip in enumerate(result.ranked_clips):
+        filename = result.rendered_paths[i].name if i < len(result.rendered_paths) else "-"
+        table.add_row(
+            str(i + 1),
+            clip.title,
+            f"{clip.candidate.start:.1f}s - {clip.candidate.end:.1f}s",
+            f"{clip.final_score:.2f}",
+            filename,
+        )
+    console.print(table)
 
 
 @app.command()
-def detect() -> None:
-    """Detect highlight candidates from extracted signals."""
+def detect(
+    video: Annotated[
+        str | None,
+        typer.Argument(
+            help="Path or URL to input livestream VOD.",
+        ),
+    ] = None,
+    chat: Annotated[
+        Path | None,
+        typer.Option(
+            "--chat",
+            "-c",
+            help="Path to chat replay file.",
+            dir_okay=False,
+        ),
+    ] = None,
+    output: Annotated[
+        Path,
+        typer.Option(
+            "--output",
+            "-o",
+            help="Destination path for detected candidates JSON file.",
+        ),
+    ] = Path("candidates.json"),
+    config: Annotated[
+        Path | None,
+        typer.Option(
+            "--config",
+            help="Path to configuration YAML file.",
+            dir_okay=False,
+        ),
+    ] = None,
+    no_vision: Annotated[
+        bool,
+        typer.Option(
+            "--no-vision",
+            help="Disable visual motion/action scoring.",
+        ),
+    ] = False,
+    dry_run: Annotated[
+        bool,
+        typer.Option(
+            "--dry-run",
+            help="Print detection plan without executing.",
+        ),
+    ] = False,
+) -> None:
+    """Detect highlight candidate windows from video and chat signals."""
+    if video is None:
+        console.print("[yellow]Usage: streamclip detect <video_path_or_url> [options][/yellow]")
+        console.print("Run 'streamclip detect --help' for all available options.")
+        return
+
+    cfg = Config.from_yaml(config) if config else Config()
+    options = PipelineOptions(
+        video=video,
+        chat=chat,
+        config=cfg,
+        no_vision=no_vision,
+        dry_run=dry_run,
+    )
+
+    if dry_run:
+        console.print(
+            Panel.fit("[bold cyan]streamclip Detect Plan[/bold cyan]", border_style="cyan")
+        )
+        console.print(f"VOD Input: [bold]{video}[/bold]")
+        console.print(f"Chat Source: {chat or '(None)'}")
+        console.print(f"Vision Motion Scoring: {not no_vision}")
+        console.print(f"Target Output: {output}")
+        return
+
+    try:
+        with console.status("[bold green]Detecting highlight candidates...[/bold green]"):
+            candidates = detect_candidates(options)
+    except PipelineError as err:
+        console.print(f"[bold red]Detection Error:[/bold red] {err}")
+        raise typer.Exit(code=1) from None
+    except Exception as err:
+        console.print(f"[bold red]Unexpected Error:[/bold red] {err}")
+        raise typer.Exit(code=1) from None
+
+    output.parent.mkdir(parents=True, exist_ok=True)
+    cands_json = [c.model_dump(mode="json") for c in candidates]
+    output.write_text(json.dumps(cands_json, indent=2), encoding="utf-8")
+
+    console.print(
+        f"[bold green]Detected {len(candidates)} highlight candidates.[/bold green] "
+        f"Written to {output}"
+    )
 
 
 @app.command()
-def render() -> None:
-    """Render highlight clips into vertical video layout."""
+def render(
+    candidates: Annotated[
+        Path | None,
+        typer.Argument(
+            help="Path to candidates.json containing detected candidate windows.",
+        ),
+    ] = None,
+    video: Annotated[
+        str | None,
+        typer.Option(
+            "--video",
+            "-v",
+            help="Path or URL to VOD video file.",
+        ),
+    ] = None,
+    out_dir: Annotated[
+        Path,
+        typer.Option(
+            "--out-dir",
+            "-o",
+            help="Output directory for rendered clips.",
+        ),
+    ] = Path("output"),
+    config: Annotated[
+        Path | None,
+        typer.Option(
+            "--config",
+            help="Path to configuration YAML file.",
+            dir_okay=False,
+        ),
+    ] = None,
+    layout: Annotated[
+        str,
+        typer.Option(
+            "--layout",
+            help="Vertical layout: 'gameplay_only', 'stack', or 'facecam_only'.",
+        ),
+    ] = "gameplay_only",
+    dry_run: Annotated[
+        bool,
+        typer.Option(
+            "--dry-run",
+            help="Print rendering plan without encoding.",
+        ),
+    ] = False,
+    top_k: Annotated[
+        int | None,
+        typer.Option(
+            "--top-k",
+            "-k",
+            help="Maximum number of clips to render.",
+        ),
+    ] = None,
+    max_workers: Annotated[
+        int,
+        typer.Option(
+            "--max-workers",
+            "-w",
+            help="Maximum concurrent rendering workers.",
+        ),
+    ] = 2,
+) -> None:
+    """Render vertical video clips directly from precomputed candidate windows."""
+    if candidates is None or video is None:
+        console.print(
+            "[yellow]Usage: streamclip render <candidates.json> --video <video> [options][/yellow]"
+        )
+        console.print("Run 'streamclip render --help' for all available options.")
+        return
+
+    if not candidates.is_file():
+        console.print(f"[bold red]Error:[/bold red] Candidates file '{candidates}' not found.")
+        raise typer.Exit(code=1)
+
+    cfg = Config.from_yaml(config) if config else Config()
+    options = PipelineOptions(
+        video=video,
+        out_dir=out_dir,
+        config=cfg,
+        layout=layout,
+        dry_run=dry_run,
+        top_k=top_k,
+        max_workers=max_workers,
+    )
+
+    if dry_run:
+        console.print(
+            Panel.fit("[bold cyan]streamclip Render Plan[/bold cyan]", border_style="cyan")
+        )
+        console.print(f"Candidates File: {candidates}")
+        console.print(f"Video Source: {video}")
+        console.print(f"Layout: {layout}")
+        console.print(f"Output Directory: {out_dir}")
+        return
+
+    try:
+        with console.status("[bold green]Rendering highlight clips...[/bold green]"):
+            rendered_paths = render_from_candidates(candidates, video, out_dir, options=options)
+    except Exception as err:
+        console.print(f"[bold red]Render Error:[/bold red] {err}")
+        raise typer.Exit(code=1) from None
+
+    console.print(
+        f"[bold green]Rendered {len(rendered_paths)} clips successfully![/bold green] "
+        f"Saved in {out_dir}"
+    )
 
 
 @app.command()
@@ -97,7 +458,7 @@ def eval(
 ) -> None:
     """Evaluate candidate highlights against ground truth annotations."""
     if labels is None:
-        typer.echo("Error: --labels is required.")
+        console.print("[yellow]Error: --labels is required.[/yellow]")
         return
 
     cands: list[Candidate] = []
@@ -126,17 +487,17 @@ def eval(
             silence_points=silence_pts,
         )
     else:
-        typer.echo("Error: Please provide either --candidates or --video.", err=True)
+        console.print("[bold red]Error:[/bold red] Please provide either --candidates or --video.")
         return
 
     gt_labels = load_labels(labels)
     metrics = evaluate(cands, gt_labels, k=k)
 
-    typer.echo(f"Highlight Evaluation Results (K={k}):")
-    typer.echo(f"  Recall@{k}: {metrics.recall:.4f}")
-    typer.echo(f"  Precision@{k}: {metrics.precision:.4f}")
-    typer.echo(f"  Mean Time Offset: {metrics.mean_time_offset:.2f}s")
-    typer.echo(
+    console.print(f"Highlight Evaluation Results (K={k}):")
+    console.print(f"  Recall@{k}: {metrics.recall:.4f}")
+    console.print(f"  Precision@{k}: {metrics.precision:.4f}")
+    console.print(f"  Mean Time Offset: {metrics.mean_time_offset:.2f}s")
+    console.print(
         f"  Hits: {metrics.hits}/{metrics.total_labels} "
         f"(from {metrics.total_candidates} candidates evaluated)"
     )
@@ -220,7 +581,7 @@ def tune(
 ) -> None:
     """Tune fusion weights and peak detection parameters."""
     if labels is None or video is None:
-        typer.echo("Error: --labels and --video are required.")
+        console.print("[yellow]Error: --labels and --video are required.[/yellow]")
         return
 
     gt_labels = load_labels(labels)
@@ -231,7 +592,7 @@ def tune(
         tracks.append(extract_chat_signal(vod, msgs))
     silence_pts = silence_points(vod)
 
-    typer.echo(f"Starting {method} search tuning over multimodal signals...")
+    console.print(f"Starting {method} search tuning over multimodal signals...")
     search_method: Literal["grid", "random"] = "random" if method == "random" else "grid"
     res = tune_hyperparameters(
         tracks=tracks,
@@ -245,12 +606,12 @@ def tune(
         seed=seed,
         out_path=output,
     )
-    typer.echo(f"Tuning complete! Best config written to {output}")
-    typer.echo(f"  Best Recall@{k}: {res.best_metrics.recall:.4f}")
-    typer.echo(f"  Best Precision@{k}: {res.best_metrics.precision:.4f}")
-    typer.echo(f"  Mean Time Offset: {res.best_metrics.mean_time_offset:.2f}s")
-    typer.echo(f"  Weights: {res.best_config.fusion_weights.as_dict()}")
-    typer.echo(
+    console.print(f"[bold green]Tuning complete![/bold green] Best config written to {output}")
+    console.print(f"  Best Recall@{k}: {res.best_metrics.recall:.4f}")
+    console.print(f"  Best Precision@{k}: {res.best_metrics.precision:.4f}")
+    console.print(f"  Mean Time Offset: {res.best_metrics.mean_time_offset:.2f}s")
+    console.print(f"  Weights: {res.best_config.fusion_weights.as_dict()}")
+    console.print(
         f"  Peak Height: {res.best_config.peak_height}, Min Gap: {res.best_config.min_peak_gap_s}s"
     )
 
