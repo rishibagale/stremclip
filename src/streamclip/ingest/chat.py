@@ -5,6 +5,7 @@ from __future__ import annotations
 import csv
 import io
 import json
+import math
 from pathlib import Path
 from typing import Any
 
@@ -55,7 +56,7 @@ def _parse_twitch_downloader_dict(data: dict[str, Any]) -> list[ChatMessage]:
         except (ValueError, TypeError):
             continue
 
-        if t < 0.0:
+        if math.isnan(t) or math.isinf(t) or t < 0.0:
             continue
 
         commenter = item.get("commenter")
@@ -118,7 +119,7 @@ def _parse_chat_downloader_list(items: list[Any]) -> list[ChatMessage]:
         except (ValueError, TypeError):
             continue
 
-        if t < 0.0:
+        if math.isnan(t) or math.isinf(t) or t < 0.0:
             continue
 
         author = item.get("author")
@@ -170,7 +171,7 @@ def _parse_csv_content(content: str) -> list[ChatMessage]:
         except ValueError:
             continue
 
-        if t < 0.0:
+        if math.isnan(t) or math.isinf(t) or t < 0.0:
             continue
 
         user = row[user_idx].strip() or "anonymous"
@@ -223,12 +224,13 @@ def parse_chat(source: Path | str) -> list[ChatMessage]:
         if not source_path.is_file():
             raise ChatParseError(f"Failed to read chat source file: {source} not found")
         try:
-            content = source_path.read_text(encoding="utf-8")
+            content = source_path.read_text(encoding="utf-8", errors="replace")
         except OSError as err:
             raise ChatParseError(f"Failed to read chat source file {source}: {err}") from err
     else:
         content = str(source)
 
+    content = content.replace("\x00", "")
     stripped = content.strip()
     if not stripped:
         return []

@@ -460,6 +460,9 @@ def eval(
     if labels is None:
         console.print("[yellow]Error: --labels is required.[/yellow]")
         return
+    if not labels.is_file():
+        console.print(f"[bold red]Error:[/bold red] Labels file '{labels}' not found.")
+        raise typer.Exit(code=1)
 
     cands: list[Candidate] = []
 
@@ -583,6 +586,12 @@ def tune(
     if labels is None or video is None:
         console.print("[yellow]Error: --labels and --video are required.[/yellow]")
         return
+    if not labels.is_file():
+        console.print(f"[bold red]Error:[/bold red] Labels file '{labels}' not found.")
+        raise typer.Exit(code=1)
+    if not video.is_file():
+        console.print(f"[bold red]Error:[/bold red] Video file '{video}' not found.")
+        raise typer.Exit(code=1)
 
     gt_labels = load_labels(labels)
     vod = probe(video)
