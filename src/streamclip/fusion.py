@@ -137,29 +137,32 @@ def fuse_signals(
 
     weights_dict = cfg.fusion_weights.as_dict()
 
+    # Compute raw confidence and effective weights per track
+    active_weights: dict[str, float] = {}
+    for track in track_list:
+        if track.meta.get("empty", False) or track.meta.get("has_audio") is False:
+            conf = 0.0
+        else:
+            conf = float(track.meta.get("activity_confidence", track.meta.get("confidence", 1.0)))
+        base_w = float(weights_dict.get(track.name, 1.0))
+        active_weights[track.name] = base_w * conf
+
+    sum_effective = sum(active_weights.values())
+    sum_base = sum(float(weights_dict.get(t.name, 1.0)) for t in track_list)
+    # Renormalize active tracks when inactive tracks are absent to maintain dynamic range
+    norm_factor = (sum_base / sum_effective) if sum_effective > 0 else 1.0
+
     for track in track_list:
         raw_vals = np.zeros(total_seconds, dtype=np.float64)
         raw_vals[: len(track.values)] = track.values
 
-        # 1. Determine confidence from track metadata
-        if track.meta.get("empty", False):
-            confidence = 0.0
-        elif track.meta.get("has_audio") is False:
-            confidence = 0.0
-        else:
-            confidence = float(
-                track.meta.get("activity_confidence", track.meta.get("confidence", 1.0))
-            )
+        effective_weight = active_weights[track.name] * norm_factor
 
-        # 2. Config weight scaled by confidence
-        base_weight = float(weights_dict.get(track.name, 1.0))
-        effective_weight = base_weight * confidence
-
-        # 3. Rolling baseline z-score
+        # Rolling baseline z-score
         z = compute_rolling_zscore(raw_vals, window_size=window_size, use_mad=use_mad)
         zscores_by_track[track.name] = [float(x) for x in z.tolist()]
 
-        # 4. Weighted component contribution
+        # Weighted component contribution
         component = effective_weight * z
         components_by_track[track.name] = component
         fused_raw += component

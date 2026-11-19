@@ -135,13 +135,16 @@ def extract_signals_parallel(
             cache.set(vod.path, cfg_slice, track.model_dump(mode="json"))
         return track
 
-    def get_silence() -> list[float]:
+    def get_silence(audio: Any | None = None) -> list[float]:
         cfg_slice = {"task": "silence_points"}
         if is_cached_file and cache is not None:
             cached = cache.get(vod.path, cfg_slice)
             if isinstance(cached, list):
                 return [float(x) for x in cached]
-        pts = silence_points(vod)
+        rms_data = None
+        if audio is not None and hasattr(audio, "meta"):
+            rms_data = audio.meta.get("_rms_vals") or getattr(audio, "values", None)
+        pts = silence_points(vod, rms_vals=rms_data)
         if is_cached_file and cache is not None:
             cache.set(vod.path, cfg_slice, pts)
         return pts
@@ -161,12 +164,12 @@ def extract_signals_parallel(
 
     with ThreadPoolExecutor(max_workers=2) as executor:
         fut_audio = executor.submit(get_audio)
-        fut_silence = executor.submit(get_silence)
         fut_chat = executor.submit(get_chat)
 
         audio_track = fut_audio.result()
-        silence_pts = fut_silence.result()
         chat_track = fut_chat.result()
+
+    silence_pts = get_silence(audio_track)
 
     return [audio_track, chat_track], silence_pts
 

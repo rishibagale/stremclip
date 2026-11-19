@@ -73,19 +73,26 @@ def extract_audio_pcm(
     ]
 
     try:
-        proc = subprocess.run(cmd, capture_output=True, check=False)
-        if proc.returncode != 0 or not proc.stdout:
-            return np.zeros(expected_samples, dtype=np.float32)
-        raw_pcm = np.frombuffer(proc.stdout, dtype=np.float32)
+        buf = bytearray()
+        with subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL) as proc:
+            if proc.stdout is None:
+                return np.zeros(expected_samples, dtype=np.float32)
+            chunk_size = 1024 * 1024 * 4  # 4 MB
+            while True:
+                chunk = proc.stdout.read(chunk_size)
+                if not chunk:
+                    break
+                buf.extend(chunk)
+            proc.kill()
+
+        raw_pcm = np.frombuffer(buf, dtype=np.float32)
+        if len(raw_pcm) < expected_samples:
+            padded = np.zeros(expected_samples, dtype=np.float32)
+            padded[: len(raw_pcm)] = raw_pcm
+            return padded
+        return raw_pcm[:expected_samples]
     except (OSError, ValueError):
         return np.zeros(expected_samples, dtype=np.float32)
-
-    # Pad or truncate to expected length
-    if len(raw_pcm) < expected_samples:
-        padded = np.zeros(expected_samples, dtype=np.float32)
-        padded[: len(raw_pcm)] = raw_pcm
-        return padded
-    return raw_pcm[:expected_samples]
 
 
 def compute_per_second_rms(
@@ -212,7 +219,7 @@ def extract_audio_signal(
 ) -> SignalTrack:
     """Extract a 1 Hz raw unnormalized SignalTrack from video audio.
 
-    Computes per-second RMS and spectral-flux energy using librosa.
+    Computes per-second RMS and spectral-flux energy using streaming chunked processing.
 
     Args:
         vod: VodMeta describing target VOD.
@@ -231,37 +238,112 @@ def extract_audio_signal(
             meta={
                 "has_audio": False,
                 "rms_mean": 0.0,
+                "rms_peak": 0.0,
                 "yamnet_available": False,
             },
         )
 
-    # 1. Extract 16 kHz mono audio via ffmpeg
+    ffmpeg_bin = shutil.which("ffmpeg")
+    if not ffmpeg_bin:
+        return SignalTrack(
+            name="audio",
+            hz=1.0,
+            values=[0.0] * total_seconds,
+            meta={
+                "has_audio": False,
+                "rms_mean": 0.0,
+                "rms_peak": 0.0,
+                "yamnet_available": False,
+            },
+        )
+
     sample_rate = 16000
-    pcm = extract_audio_pcm(vod, sample_rate=sample_rate)
+    cmd = [
+        ffmpeg_bin,
+        "-v",
+        "error",
+        "-i",
+        str(vod.path),
+        "-vn",
+        "-ac",
+        "1",
+        "-ar",
+        str(sample_rate),
+        "-f",
+        "f32le",
+        "pipe:1",
+    ]
 
-    # 2. Compute per-second features
-    rms_vals = compute_per_second_rms(pcm, sample_rate=sample_rate, total_seconds=total_seconds)
-    flux_vals = compute_per_second_spectral_flux(
-        pcm, sample_rate=sample_rate, total_seconds=total_seconds
-    )
+    rms_vals = np.zeros(total_seconds, dtype=np.float64)
+    flux_vals = np.zeros(total_seconds, dtype=np.float64)
+    yamnet_res: dict[str, Any] = {"scream": 0.0, "laughter": 0.0, "available": False}
 
-    # 3. Combine raw unnormalized RMS and spectral flux
+    chunk_seconds = 600  # 10 minutes per chunk to maintain <50 MB memory usage
+    bytes_per_sample = 4
+
+    try:
+        with subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL) as proc:
+            if proc.stdout is None:
+                return SignalTrack(name="audio", hz=1.0, values=[0.0] * total_seconds, meta={})
+
+            sec_offset = 0
+            first_chunk = True
+
+            while sec_offset < total_seconds:
+                remaining_sec = min(chunk_seconds, total_seconds - sec_offset)
+                needed_bytes = remaining_sec * sample_rate * bytes_per_sample
+
+                # Read needed_bytes in manageable 64 KB increments
+                buf = bytearray()
+                while len(buf) < needed_bytes:
+                    chunk = proc.stdout.read(min(65536, needed_bytes - len(buf)))
+                    if not chunk:
+                        break
+                    buf.extend(chunk)
+
+                if not buf:
+                    break
+
+                chunk_pcm = np.frombuffer(buf, dtype=np.float32)
+                secs_in_chunk = min(remaining_sec, math.ceil(len(chunk_pcm) / sample_rate))
+
+                if first_chunk:
+                    yamnet_res = classify_yamnet(
+                        chunk_pcm[: sample_rate * 30], sample_rate=sample_rate
+                    )
+                    first_chunk = False
+
+                chunk_rms = compute_per_second_rms(
+                    chunk_pcm, sample_rate=sample_rate, total_seconds=secs_in_chunk
+                )
+                chunk_flux = compute_per_second_spectral_flux(
+                    chunk_pcm, sample_rate=sample_rate, total_seconds=secs_in_chunk
+                )
+
+                rms_vals[sec_offset : sec_offset + secs_in_chunk] = chunk_rms[:secs_in_chunk]
+                flux_vals[sec_offset : sec_offset + secs_in_chunk] = chunk_flux[:secs_in_chunk]
+
+                sec_offset += secs_in_chunk
+                if len(buf) < needed_bytes:
+                    break
+
+            proc.kill()
+    except (OSError, ValueError):
+        pass
+
     combined_signal = rms_vals + (0.5 * flux_vals)
-
-    # 4. Optional YAMNet classification
-    yamnet_res = classify_yamnet(pcm[: sample_rate * 30], sample_rate=sample_rate)
-
     return SignalTrack(
         name="audio",
         hz=1.0,
         values=[float(x) for x in combined_signal.tolist()],
         meta={
             "has_audio": True,
-            "rms_mean": float(np.mean(rms_vals)),
-            "rms_peak": float(np.max(rms_vals)),
+            "rms_mean": float(np.mean(rms_vals)) if len(rms_vals) > 0 else 0.0,
+            "rms_peak": float(np.max(rms_vals)) if len(rms_vals) > 0 else 0.0,
             "yamnet_available": yamnet_res.get("available", False),
             "scream_score": yamnet_res.get("scream", 0.0),
             "laughter_score": yamnet_res.get("laughter", 0.0),
+            "_rms_vals": rms_vals.tolist(),
         },
     )
 
@@ -270,6 +352,7 @@ def silence_points(
     vod: VodMeta,
     threshold_db: float = -35.0,
     min_duration_s: float = 1.0,
+    rms_vals: np.ndarray[Any, np.dtype[np.float64]] | list[float] | None = None,
 ) -> list[float]:
     """Identify quiet or silent timestamps in the VOD suitable for clip boundaries.
 
@@ -277,6 +360,7 @@ def silence_points(
         vod: VodMeta describing target media.
         threshold_db: Audio level threshold in decibels below which audio is considered quiet.
         min_duration_s: Minimum duration required for silence consideration.
+        rms_vals: Optional pre-computed per-second RMS energy array.
 
     Returns:
         List of timestamp points in seconds where audio is quiet.
@@ -286,24 +370,33 @@ def silence_points(
     if not vod.has_audio:
         return [float(s) for s in range(total_seconds)]
 
-    sample_rate = 16000
-    pcm = extract_audio_pcm(vod, sample_rate=sample_rate)
-    rms_vals = compute_per_second_rms(pcm, sample_rate=sample_rate, total_seconds=total_seconds)
+    if rms_vals is not None:
+        computed_rms = np.asarray(rms_vals, dtype=np.float64)
+    else:
+        # Extract audio signal to obtain streaming-safe RMS values
+        track = extract_audio_signal(vod)
+        cached_rms = track.meta.get("_rms_vals")
+        if cached_rms and isinstance(cached_rms, list):
+            computed_rms = np.asarray(cached_rms, dtype=np.float64)
+        else:
+            computed_rms = np.asarray(track.values, dtype=np.float64)
 
     # Convert to dB relative to 1.0
-    safe_rms = np.maximum(rms_vals, 1e-6)
+    safe_rms = np.maximum(computed_rms, 1e-6)
     db_vals = 20.0 * np.log10(safe_rms)
 
     # Detect quiet seconds
     quiet_seconds: list[float] = []
     for s in range(total_seconds):
-        if db_vals[s] <= threshold_db:
+        if s < len(db_vals) and db_vals[s] <= threshold_db:
             quiet_seconds.append(float(s))
 
-    # If no strict threshold matched, find local minima
+    # If no strict threshold matched, find local minima below mean
     if not quiet_seconds:
-        mean_db = float(np.mean(db_vals))
-        quiet_seconds = [float(s) for s in range(total_seconds) if db_vals[s] < mean_db]
+        mean_db = float(np.mean(db_vals)) if len(db_vals) > 0 else 0.0
+        quiet_seconds = [
+            float(s) for s in range(total_seconds) if s < len(db_vals) and db_vals[s] < mean_db
+        ]
 
     return quiet_seconds
 
