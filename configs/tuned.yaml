@@ -1,0 +1,12 @@
+fusion_weights:
+  chat: 0.65
+  audio: 0.12
+  vision: 0.11
+peak_height: 0.95
+min_peak_gap_s: 40.0
+clip_min_s: 15.0
+clip_max_s: 60.0
+pre_roll_s: 15.0
+post_roll_s: 4.0
+top_k: 20
+vision_budget_windows: 40

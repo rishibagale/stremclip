@@ -22,12 +22,17 @@ class ProbeError(VideoIngestError):
     """Raised when media inspection via ffprobe fails."""
 
 
-def download(url: str, dest: Path | str) -> Path:
+def download(
+    url: str,
+    dest: Path | str,
+    quality: str = "bestvideo+bestaudio/best",
+) -> Path:
     """Download livestream VOD from URL using yt-dlp.
 
     Args:
         url: URL of the livestream or VOD to download.
         dest: Destination file path for the downloaded video.
+        quality: Format specification selector passed to yt-dlp -f.
 
     Returns:
         Path to the downloaded file.
@@ -41,6 +46,8 @@ def download(url: str, dest: Path | str) -> Path:
     cmd = [
         "yt-dlp",
         "--no-playlist",
+        "-f",
+        quality,
         "-o",
         str(dest_path),
         url,

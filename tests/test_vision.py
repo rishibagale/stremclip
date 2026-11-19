@@ -17,6 +17,7 @@ from streamclip.signals.vision import (
     FakeVisionScorer,
     LLMVisionScorer,
     MotionScorer,
+    TemplateMatcher,
     _parse_strict_json,
 )
 
@@ -47,6 +48,19 @@ def test_fake_vision_scorer_protocol() -> None:
     """Verify that FakeVisionScorer implements VisionScorer."""
     fake = FakeVisionScorer()
     assert isinstance(fake, VisionScorer)
+
+
+def test_template_matcher_protocol() -> None:
+    """Verify that custom classes satisfying match(frame) adhere to TemplateMatcher."""
+
+    class DummyMatcher:
+        def match(self, frame: VideoFrame) -> float:
+            return 0.95
+
+    matcher = DummyMatcher()
+    assert isinstance(matcher, TemplateMatcher)
+    frame = VideoFrame(t=1.0, array=np.zeros((10, 10, 3), dtype=np.uint8))
+    assert matcher.match(frame) == 0.95
 
 
 def test_motion_scorer_protocol() -> None:

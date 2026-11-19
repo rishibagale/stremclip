@@ -123,6 +123,25 @@ def test_download_success(mock_run: MagicMock, tmp_path: Path) -> None:
 
 
 @patch("subprocess.run")
+def test_download_custom_quality(mock_run: MagicMock, tmp_path: Path) -> None:
+    mock_run.return_value = subprocess.CompletedProcess(
+        args=["yt-dlp"],
+        returncode=0,
+        stdout="[download] 100%",
+        stderr="",
+    )
+    dest = tmp_path / "out_1080.mp4"
+    res = download("https://example.com/vod/456", dest, quality="bestvideo[height<=1080]+bestaudio")
+    assert res == dest
+
+    mock_run.assert_called_once()
+    called_cmd = mock_run.call_args[0][0]
+    assert "-f" in called_cmd
+    f_idx = called_cmd.index("-f")
+    assert called_cmd[f_idx + 1] == "bestvideo[height<=1080]+bestaudio"
+
+
+@patch("subprocess.run")
 def test_download_failure(mock_run: MagicMock, tmp_path: Path) -> None:
     mock_run.return_value = subprocess.CompletedProcess(
         args=["yt-dlp"],

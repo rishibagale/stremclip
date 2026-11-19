@@ -10,7 +10,7 @@ import time
 import urllib.error
 import urllib.request
 from pathlib import Path
-from typing import Any
+from typing import Any, Protocol, runtime_checkable
 
 import numpy as np
 
@@ -18,6 +18,22 @@ from streamclip.cache import DiskCache
 from streamclip.interfaces import VisionScorer
 from streamclip.models import Candidate, VodMeta
 from streamclip.signals.frames import VideoFrame, sample_frames
+
+
+@runtime_checkable
+class TemplateMatcher(Protocol):
+    """Protocol for optional visual template matching (e.g. HUD cues, kill feeds)."""
+
+    def match(self, frame: VideoFrame) -> float:
+        """Return match confidence between 0.0 and 1.0.
+
+        Args:
+            frame: VideoFrame sampled from video.
+
+        Returns:
+            Match confidence float in [0.0, 1.0].
+        """
+        ...
 
 
 def _parse_strict_json(text: str) -> dict[str, Any]:

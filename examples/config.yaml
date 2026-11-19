@@ -1,0 +1,44 @@
+# streamclip configuration file example
+# Initial target: Grand Theft Auto VI (GTA VI) livestream broadcasts
+
+# Multimodal signal fusion weights
+fusion_weights:
+  # Weight for chat message density, hype emotes (LUL, KEKW, OMEGALUL, WTF, POG),
+  # caps ratio, and message repetition spam chains.
+  chat: 0.50
+
+  # Weight for 16 kHz audio RMS energy and sudden spectral flux changes.
+  audio: 0.30
+
+  # Weight for computer vision activity (frame-difference magnitude and scene-change rate).
+  vision: 0.20
+
+# Peak detection parameters
+# Minimum fused z-score elevation required to trigger a candidate highlight.
+peak_height: 1.0
+
+# Minimum gap in seconds between distinct highlight peaks.
+# Prevents duplicate cuts from the same sustained moment.
+min_peak_gap_s: 20.0
+
+# Candidate windowing bounds (in seconds)
+# Minimum clip duration (e.g. 15.0s for mobile short-form).
+clip_min_s: 15.0
+
+# Maximum clip duration (e.g. 60.0s for vertical platforms).
+clip_max_s: 60.0
+
+# Pre-roll seconds to capture prior to the peak event.
+# Snapped to the nearest silence point or word boundary.
+pre_roll_s: 15.0
+
+# Post-roll buffer seconds after fused energy returns to baseline.
+post_roll_s: 4.0
+
+# Candidate selection and resource budgets
+# Maximum number of highlight clips to select and rank.
+top_k: 20
+
+# Maximum number of candidate windows to evaluate with the visual motion/LLM scorer.
+# Limits video frame decoding and API token expenditure.
+vision_budget_windows: 40
