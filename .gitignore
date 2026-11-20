@@ -43,3 +43,16 @@ Thumbs.db
 *.swo
 .vscode/
 .idea/
+
+# Media & Local Outputs
+output/
+*.mp4
+*.part
+*.part*
+*.wav
+*.m4a
+*.jpg
+*.jpeg
+*.png
+*.ass
+
