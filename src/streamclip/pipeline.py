@@ -15,7 +15,15 @@ from streamclip.fusion import fuse_signals
 from streamclip.ingest.chat import parse_chat
 from streamclip.ingest.video import download, probe
 from streamclip.interfaces import Reranker, Transcriber
-from streamclip.models import Candidate, ChatMessage, RankedClip, RenderSpec, VodMeta, Word
+from streamclip.models import (
+    Candidate,
+    ChatMessage,
+    FacecamBox,
+    RankedClip,
+    RenderSpec,
+    VodMeta,
+    Word,
+)
 from streamclip.render import RenderJob, render_clips
 from streamclip.rerank import HeuristicReranker, LLMReranker
 from streamclip.signals.audio import extract_audio_signal, silence_points
@@ -55,6 +63,7 @@ class PipelineOptions:
     cache_dir: Path = field(default_factory=lambda: Path(".streamclip_cache"))
     max_workers: int = 2
     layout: str = "gameplay_only"
+    facecam: FacecamBox | None = None
     top_k: int | None = None
     mask_profanity: bool = True
     candidates_path: Path | None = None
@@ -338,9 +347,15 @@ def run_pipeline(options: PipelineOptions) -> PipelineResult:
             if options.layout in ("stack", "gameplay_only", "facecam_only")
             else "gameplay_only"
         )
+        resolved_facecam = options.facecam or getattr(cfg, "facecam", None)
+        if spec_layout == "stack" and resolved_facecam is None:
+            from streamclip.render.layout import suggest_facecam
+
+            resolved_facecam = suggest_facecam(vod)
+
         spec = RenderSpec(
             layout=spec_layout,  # type: ignore[arg-type]
-            facecam=getattr(cfg, "facecam", None),
+            facecam=resolved_facecam,
             captions=clip_words,
             out_w=1080,
             out_h=1920,
@@ -463,9 +478,15 @@ def render_from_candidates(
             if opts.layout in ("stack", "gameplay_only", "facecam_only")
             else "gameplay_only"
         )
+        resolved_facecam = opts.facecam or getattr(cfg, "facecam", None)
+        if spec_layout == "stack" and resolved_facecam is None:
+            from streamclip.render.layout import suggest_facecam
+
+            resolved_facecam = suggest_facecam(vod)
+
         spec = RenderSpec(
             layout=spec_layout,  # type: ignore[arg-type]
-            facecam=getattr(cfg, "facecam", None),
+            facecam=resolved_facecam,
             captions=clip_words,
             out_w=1080,
             out_h=1920,

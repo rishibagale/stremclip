@@ -15,6 +15,38 @@ def escape_ffmpeg_filter_path(path: Path | str) -> str:
     return p.replace(":", r"\:").replace("'", r"\'")
 
 
+def suggest_facecam(vod: Any) -> FacecamBox:
+    """Suggest high-probability facecam region for the VOD.
+
+    Defaults to bottom-left 22% width and 26% height scaled to VOD dimensions
+    (typical layout for streamers like CarryMinati and IShowSpeed).
+    """
+    if hasattr(vod, "width") and hasattr(vod, "height"):
+        w = int(vod.width)
+        h = int(vod.height)
+    else:
+        try:
+            from streamclip.ingest.video import probe
+
+            meta = probe(vod)
+            w = meta.width
+            h = meta.height
+        except Exception:
+            w = 1920
+            h = 1080
+
+    cam_w = round(w * 0.22)
+    cam_h = round(h * 0.26)
+    cam_x = round(w * 0.01)
+    cam_y = round(h * 0.44)
+    # Ensure even dimensions for ffmpeg scaling
+    if cam_w % 2 != 0:
+        cam_w += 1
+    if cam_h % 2 != 0:
+        cam_h += 1
+    return FacecamBox(x=cam_x, y=cam_y, w=cam_w, h=cam_h)
+
+
 def resolve_facecam(
     spec: RenderSpec,
     config: Any | None = None,
@@ -31,7 +63,7 @@ def resolve_facecam(
             return FacecamBox(**fc)
     if default is not None:
         return default
-    # Default 4:3 facecam region (e.g. 480x360 at 0, 0)
+    # Default bottom-left facecam region
     return FacecamBox(x=0, y=0, w=480, h=360)
 
 
@@ -70,7 +102,7 @@ def build_filtergraph(
     if spec.layout == "gameplay_only":
         return (
             f"[0:v]scale=w='if(gt(a,{out_w}/{out_h}),-2,{out_w})':"
-            f"h='if(gt(a,{out_w}/{out_h}),{out_h},-2)',"
+            f"h='if(gt(a,{out_w}/{out_h}),{out_h},-2)':flags=lanczos,"
             f"crop={out_w}:{out_h},setsar=1{sub_filter}[v]"
         )
 
@@ -79,7 +111,7 @@ def build_filtergraph(
         return (
             f"[0:v]crop={fc.w}:{fc.h}:{fc.x}:{fc.y},"
             f"scale=w='if(gt(a,{out_w}/{out_h}),-2,{out_w})':"
-            f"h='if(gt(a,{out_w}/{out_h}),{out_h},-2)',"
+            f"h='if(gt(a,{out_w}/{out_h}),{out_h},-2)':flags=lanczos,"
             f"crop={out_w}:{out_h},setsar=1{sub_filter}[v]"
         )
 
@@ -94,13 +126,13 @@ def build_filtergraph(
         # Gameplay filter on top, facecam on bottom
         gameplay_filter = (
             f"[v_game]scale=w='if(gt(a,{out_w}/{top_h}),-2,{out_w})':"
-            f"h='if(gt(a,{out_w}/{top_h}),{top_h},-2)',"
+            f"h='if(gt(a,{out_w}/{top_h}),{top_h},-2)':flags=lanczos,"
             f"crop={out_w}:{top_h},setsar=1[top]"
         )
         facecam_filter = (
             f"[v_cam]crop={fc.w}:{fc.h}:{fc.x}:{fc.y},"
             f"scale=w='if(gt(a,{out_w}/{bottom_h}),-2,{out_w})':"
-            f"h='if(gt(a,{out_w}/{bottom_h}),{bottom_h},-2)',"
+            f"h='if(gt(a,{out_w}/{bottom_h}),{bottom_h},-2)':flags=lanczos,"
             f"crop={out_w}:{bottom_h},setsar=1[bottom]"
         )
 

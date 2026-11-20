@@ -175,10 +175,10 @@ def render_clip(job: RenderJob) -> Path:
 
         encoder = select_video_encoder(prefer_nvenc=job.prefer_nvenc)
         if encoder == "h264_nvenc":
-            cmd.extend(["-c:v", "h264_nvenc", "-preset", "p4", "-cq", "20", "-pix_fmt", "yuv420p"])
+            cmd.extend(["-c:v", "h264_nvenc", "-preset", "p4", "-cq", "18", "-pix_fmt", "yuv420p"])
         else:
             cmd.extend(
-                ["-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-pix_fmt", "yuv420p"]
+                ["-c:v", "libx264", "-preset", "veryfast", "-crf", "18", "-pix_fmt", "yuv420p"]
             )
 
         cmd.extend(

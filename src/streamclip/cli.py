@@ -18,7 +18,7 @@ from streamclip.eval.tune import tune_hyperparameters
 from streamclip.fusion import fuse_signals
 from streamclip.ingest.chat import parse_chat
 from streamclip.ingest.video import probe
-from streamclip.models import Candidate
+from streamclip.models import Candidate, FacecamBox
 from streamclip.pipeline import (
     PipelineError,
     PipelineOptions,
@@ -35,6 +35,75 @@ app = typer.Typer(
     no_args_is_help=True,
 )
 console = Console()
+
+
+def parse_facecam_arg(
+    val: str | None,
+    vod_w: int = 1920,
+    vod_h: int = 1080,
+) -> FacecamBox | None:
+    """Parse --facecam CLI argument supporting presets and explicit coordinates."""
+    if not val:
+        return None
+    cleaned = val.strip().lower()
+
+    if cleaned in ("bottom-left", "bl"):
+        w = round(vod_w * 0.22)
+        h = round(vod_h * 0.26)
+        x = round(vod_w * 0.01)
+        y = round(vod_h * 0.44)
+        return FacecamBox(
+            x=x,
+            y=y,
+            w=w if w % 2 == 0 else w + 1,
+            h=h if h % 2 == 0 else h + 1,
+        )
+
+    if cleaned in ("bottom-right", "br"):
+        w = round(vod_w * 0.22)
+        h = round(vod_h * 0.26)
+        x = round(vod_w * 0.77)
+        y = round(vod_h * 0.73)
+        return FacecamBox(
+            x=x,
+            y=y,
+            w=w if w % 2 == 0 else w + 1,
+            h=h if h % 2 == 0 else h + 1,
+        )
+
+    if cleaned in ("top-left", "tl"):
+        w = round(vod_w * 0.22)
+        h = round(vod_h * 0.26)
+        x = round(vod_w * 0.01)
+        y = round(vod_w * 0.01)
+        return FacecamBox(
+            x=x,
+            y=y,
+            w=w if w % 2 == 0 else w + 1,
+            h=h if h % 2 == 0 else h + 1,
+        )
+
+    if cleaned in ("top-right", "tr"):
+        w = round(vod_w * 0.22)
+        h = round(vod_h * 0.26)
+        x = round(vod_w * 0.77)
+        y = round(vod_h * 0.01)
+        return FacecamBox(
+            x=x,
+            y=y,
+            w=w if w % 2 == 0 else w + 1,
+            h=h if h % 2 == 0 else h + 1,
+        )
+
+    if "," in cleaned:
+        try:
+            parts = [int(p.strip()) for p in cleaned.split(",")]
+            if len(parts) == 4:
+                return FacecamBox(x=parts[0], y=parts[1], w=parts[2], h=parts[3])
+        except ValueError:
+            return None
+
+    return None
 
 
 @app.command()
@@ -106,6 +175,13 @@ def run(
             help="Vertical layout: 'gameplay_only', 'stack', or 'facecam_only'.",
         ),
     ] = "gameplay_only",
+    facecam: Annotated[
+        str | None,
+        typer.Option(
+            "--facecam",
+            help="Facecam position preset ('bottom-left', 'bottom-right', etc.) or 'X,Y,W,H'.",
+        ),
+    ] = None,
     max_workers: Annotated[
         int,
         typer.Option(
@@ -122,6 +198,7 @@ def run(
         return
 
     cfg = Config.from_yaml(config) if config else Config()
+    parsed_facecam = parse_facecam_arg(facecam)
     options = PipelineOptions(
         video=video,
         chat=chat,
@@ -132,6 +209,7 @@ def run(
         dry_run=dry_run,
         top_k=top_k,
         layout=layout,
+        facecam=parsed_facecam,
         max_workers=max_workers,
     )
 
@@ -332,6 +410,13 @@ def render(
             help="Vertical layout: 'gameplay_only', 'stack', or 'facecam_only'.",
         ),
     ] = "gameplay_only",
+    facecam: Annotated[
+        str | None,
+        typer.Option(
+            "--facecam",
+            help="Facecam position preset ('bottom-left', 'bottom-right', etc.) or 'X,Y,W,H'.",
+        ),
+    ] = None,
     dry_run: Annotated[
         bool,
         typer.Option(
@@ -369,11 +454,13 @@ def render(
         raise typer.Exit(code=1)
 
     cfg = Config.from_yaml(config) if config else Config()
+    parsed_facecam = parse_facecam_arg(facecam)
     options = PipelineOptions(
         video=video,
         out_dir=out_dir,
         config=cfg,
         layout=layout,
+        facecam=parsed_facecam,
         dry_run=dry_run,
         top_k=top_k,
         max_workers=max_workers,
