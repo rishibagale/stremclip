@@ -182,6 +182,15 @@ def run(
             help="Facecam position preset ('bottom-left', 'bottom-right', etc.) or 'X,Y,W,H'.",
         ),
     ] = None,
+    captions: Annotated[
+        Path | None,
+        typer.Option(
+            "--captions",
+            "-c",
+            help="Path to JSON file with word timestamps for captions.",
+            dir_okay=False,
+        ),
+    ] = None,
     max_workers: Annotated[
         int,
         typer.Option(
@@ -210,6 +219,7 @@ def run(
         top_k=top_k,
         layout=layout,
         facecam=parsed_facecam,
+        captions_path=captions,
         max_workers=max_workers,
     )
 
@@ -417,6 +427,15 @@ def render(
             help="Facecam position preset ('bottom-left', 'bottom-right', etc.) or 'X,Y,W,H'.",
         ),
     ] = None,
+    captions: Annotated[
+        Path | None,
+        typer.Option(
+            "--captions",
+            "-c",
+            help="Path to JSON file with word timestamps for captions.",
+            dir_okay=False,
+        ),
+    ] = None,
     dry_run: Annotated[
         bool,
         typer.Option(
@@ -461,6 +480,7 @@ def render(
         config=cfg,
         layout=layout,
         facecam=parsed_facecam,
+        captions_path=captions,
         dry_run=dry_run,
         top_k=top_k,
         max_workers=max_workers,

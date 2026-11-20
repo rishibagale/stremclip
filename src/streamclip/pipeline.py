@@ -68,6 +68,7 @@ class PipelineOptions:
     mask_profanity: bool = True
     candidates_path: Path | None = None
     transcriber: Transcriber | None = None
+    captions_path: Path | None = None
 
 
 @dataclass
@@ -265,7 +266,14 @@ def run_pipeline(options: PipelineOptions) -> PipelineResult:
 
     # 3. Targeted Transcription on Candidate Windows Only
     words: list[Word] = []
-    if candidates and vod.has_audio:
+    if options.captions_path and Path(options.captions_path).is_file():
+        try:
+            raw_c = json.loads(Path(options.captions_path).read_text(encoding="utf-8"))
+            if isinstance(raw_c, list):
+                words = [Word.model_validate(w) for w in raw_c]
+        except Exception:
+            words = []
+    if not words and candidates and vod.has_audio:
         if options.transcriber is not None or HAS_FASTER_WHISPER:
             try:
                 words = transcribe_vod(
@@ -442,7 +450,14 @@ def render_from_candidates(
     # Transcribe candidate windows for captions if audio is available
     cache = DiskCache(opts.cache_dir)
     words: list[Word] = []
-    if vod.has_audio and (opts.transcriber is not None or HAS_FASTER_WHISPER):
+    if opts.captions_path and opts.captions_path.is_file():
+        try:
+            raw_c = json.loads(opts.captions_path.read_text(encoding="utf-8"))
+            if isinstance(raw_c, list):
+                words = [Word.model_validate(w) for w in raw_c]
+        except Exception:
+            words = []
+    if not words and vod.has_audio and (opts.transcriber is not None or HAS_FASTER_WHISPER):
         try:
             words = transcribe_vod(
                 vod=vod,
