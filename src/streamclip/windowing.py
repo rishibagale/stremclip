@@ -271,3 +271,99 @@ def create_candidates(
     # 6. Sort candidates by score descending
     merged.sort(key=lambda c: (-c.score, c.start))
     return merged
+
+
+def refine_candidate_with_transcript(
+    cand: Candidate,
+    words: list[Word],
+    max_expansion_s: float = 3.5,
+    min_clip_s: float = 15.0,
+    max_clip_s: float = 60.0,
+    snap_window_s: float = 3.0,
+) -> Candidate:
+    """Refine candidate start and end to natural sentence/speech boundaries using Whisper words.
+
+    Prevents mid-sentence cutoffs and clipped words by aligning boundaries to pauses
+    and punctuation marks (inspired by SupoClip's boundary alignment).
+    """
+    if not words:
+        return cand
+
+    refined_start = cand.start
+    refined_end = cand.end
+
+    # 1. Refine start boundary
+    expansion = max(max_expansion_s, snap_window_s)
+    nearby_start_words = [
+        w for w in words if (cand.start - expansion) <= w.start <= (cand.start + 1.5)
+    ]
+    if nearby_start_words:
+        valid_starts: list[tuple[float, float]] = []
+        for i, w in enumerate(nearby_start_words):
+            has_pause_before = False
+            if i > 0:
+                has_pause_before = (w.start - nearby_start_words[i - 1].end) >= 0.35
+            else:
+                all_idx = words.index(w) if w in words else -1
+                if all_idx > 0:
+                    has_pause_before = (w.start - words[all_idx - 1].end) >= 0.35
+
+            is_capitalized = bool(w.text and w.text[0].isupper())
+            if has_pause_before or is_capitalized:
+                if w.start <= cand.peak_t:
+                    valid_starts.append((abs(w.start - cand.start), w.start))
+
+        if valid_starts:
+            valid_starts.sort(key=lambda item: item[0])
+            refined_start = max(0.0, valid_starts[0][1])
+
+    # 2. Refine end boundary
+    nearby_end_words = [w for w in words if (cand.end - 1.5) <= w.end <= (cand.end + expansion)]
+    if nearby_end_words:
+        valid_ends: list[tuple[float, float]] = []
+        for i, w in enumerate(nearby_end_words):
+            ends_with_punct = any(w.text.endswith(p) for p in (".", "!", "?", "...", "…"))
+            has_pause_after = False
+            if i < len(nearby_end_words) - 1:
+                has_pause_after = (nearby_end_words[i + 1].start - w.end) >= 0.35
+            else:
+                all_idx = words.index(w) if w in words else -1
+                if 0 <= all_idx < len(words) - 1:
+                    has_pause_after = (words[all_idx + 1].start - w.end) >= 0.35
+
+            if ends_with_punct or has_pause_after:
+                if w.end >= cand.peak_t and (w.end - refined_start) <= max_clip_s:
+                    valid_ends.append((abs(w.end - cand.end), w.end))
+
+        if valid_ends:
+            valid_ends.sort(key=lambda item: item[0])
+            refined_end = valid_ends[0][1]
+
+    # Enforce min_clip_s: do not let refinement shrink below min(cand.duration, min_clip_s)
+    target_min_dur = min(cand.duration, min_clip_s)
+    if (refined_end - refined_start) < target_min_dur:
+        refined_start = cand.start
+        refined_end = cand.end
+
+    return Candidate(
+        peak_t=cand.peak_t,
+        start=round(refined_start, 2),
+        end=round(refined_end, 2),
+        score=cand.score,
+        components=dict(cand.components),
+    )
+
+
+def refine_candidates_with_transcript(
+    candidates: list[Candidate],
+    words: list[Word],
+    max_expansion_s: float = 3.5,
+    max_clip_s: float = 60.0,
+) -> list[Candidate]:
+    """Refine a list of candidates against the word transcript."""
+    return [
+        refine_candidate_with_transcript(
+            c, words, max_expansion_s=max_expansion_s, max_clip_s=max_clip_s
+        )
+        for c in candidates
+    ]

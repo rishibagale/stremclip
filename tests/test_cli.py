@@ -99,3 +99,49 @@ def test_cli_render_command(tmp_path: Path) -> None:
     assert "Rendered 1 clips successfully" in result.output
     rendered_clips = list(out_dir.glob("*.mp4"))
     assert len(rendered_clips) == 1
+
+
+def test_parse_facecam_arg() -> None:
+    from streamclip.cli import parse_facecam_arg
+
+    # Auto or None returns None
+    assert parse_facecam_arg(None) is None
+    assert parse_facecam_arg("auto") is None
+    assert parse_facecam_arg("detect") is None
+
+    # Presets return valid FacecamBox with even dimensions
+    bl = parse_facecam_arg("bottom-left")
+    assert bl is not None
+    assert bl.w % 2 == 0
+    assert bl.h % 2 == 0
+
+    # Custom coordinate string
+    custom = parse_facecam_arg("100, 200, 300, 400")
+    assert custom is not None
+    assert custom.x == 100
+    assert custom.y == 200
+    assert custom.w == 300
+    assert custom.h == 400
+
+
+def test_cli_run_with_virality_and_hook_banner(tmp_path: Path) -> None:
+    video_path = FIXTURES_DIR / "video.mp4"
+    chat_path = FIXTURES_DIR / "chat.csv"
+
+    result = runner.invoke(
+        app,
+        [
+            "run",
+            str(video_path),
+            "-c",
+            str(chat_path),
+            "-o",
+            str(tmp_path / "out"),
+            "--dry-run",
+            "--hook-banner",
+            "--top-k",
+            "2",
+        ],
+    )
+    assert result.exit_code == 0
+    assert "Virality" in result.output

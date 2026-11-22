@@ -122,13 +122,15 @@ def render_clip(job: RenderJob) -> Path:
         temp_dir = Path(td)
         ass_path: Path | None = None
 
-        if spec.captions:
+        if spec.captions or (spec.hook_title and spec.show_hook_banner):
             ass_path = temp_dir / "captions.ass"
             generate_ass_subtitles(
                 spec.captions,
                 out_path=ass_path,
                 clip_start=start,
                 mask_profanity=job.mask_profanity,
+                hook_title=spec.hook_title if spec.show_hook_banner else None,
+                layout=spec.layout,
             )
 
         v_filter = build_filtergraph(spec, config=job.config, ass_path=ass_path)

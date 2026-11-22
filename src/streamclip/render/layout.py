@@ -16,11 +16,21 @@ def escape_ffmpeg_filter_path(path: Path | str) -> str:
 
 
 def suggest_facecam(vod: Any) -> FacecamBox:
-    """Suggest high-probability facecam region for the VOD.
+    """Suggest high-probability facecam region for the VOD using auto detection or presets.
 
-    Defaults to bottom-left 22% width and 26% height scaled to VOD dimensions
+    Attempts automatic facecam detection from video frames, falling back to
+    bottom-left 22% width and 26% height scaled to VOD dimensions
     (typical layout for streamers like CarryMinati and IShowSpeed).
     """
+    try:
+        from streamclip.render.face_detection import detect_facecam_region
+
+        if hasattr(vod, "duration_s"):
+            det = detect_facecam_region(vod)
+            return det.box
+    except Exception:
+        pass
+
     if hasattr(vod, "width") and hasattr(vod, "height"):
         w = int(vod.width)
         h = int(vod.height)

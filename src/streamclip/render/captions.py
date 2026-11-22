@@ -133,11 +133,14 @@ def generate_ass_subtitles(
     font_size: int = 68,
     margin_v: int = 420,
     margin_lr: int = 100,
+    hook_title: str | None = None,
+    hook_duration_s: float = 3.5,
+    layout: str = "gameplay_only",
 ) -> str:
     """Generate an Advanced SubStation Alpha (.ass) subtitle script with word-level highlight.
 
     Designed for 1080x1920 vertical video with mobile-safe margins (safe zone above
-    TikTok/Reels/Shorts navigation and comment overlays).
+    TikTok/Reels/Shorts navigation and comment overlays) and optional viral hook banner.
 
     Args:
         words: List of timed Word objects.
@@ -147,12 +150,29 @@ def generate_ass_subtitles(
         highlight_color: ASS color tag for active word (default yellow: &H0000FFFF&).
         default_color: ASS color tag for non-active words (default white: &H00FFFFFF&).
         font_size: Font size in pixels (default 68 for 1080x1920).
-        margin_v: Vertical margin from bottom in pixels (default 420px mobile-safe).
+        margin_v: Vertical margin from bottom in pixels (default 420px; 920px for stack).
         margin_lr: Left and right margins in pixels (default 100px).
+        hook_title: Optional 3-5 word attention hook title banner for first few seconds.
+        hook_duration_s: Duration in seconds to display the hook banner (default 3.5s).
+        layout: Vertical layout type ('gameplay_only', 'stack', 'facecam_only').
 
     Returns:
         Full text content of the generated .ass subtitle file.
     """
+    # Smart vertical margin: stack layout places subtitles near split boundary
+    if layout == "stack" and margin_v == 420:
+        margin_v = 920
+
+    styles = [
+        f"Style: Default,Arial,{font_size},{default_color},{highlight_color},&H00000000,"
+        f"&H80000000,-1,0,0,0,100,100,0,0,1,5,3,2,{margin_lr},{margin_lr},{margin_v},1\n"
+    ]
+    if hook_title:
+        styles.append(
+            "Style: HookBanner,Arial,64,&H00FFFFFF&,&H0000FFFF&,&H00000000,"
+            "&H90000000,-1,0,0,0,100,100,0,0,1,6,4,8,80,80,140,1\n"
+        )
+
     header = (
         "[Script Info]\n"
         "ScriptType: v4.00+\n"
@@ -163,20 +183,31 @@ def generate_ass_subtitles(
         "Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, "
         "BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, "
         "BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\n"
-        f"Style: Default,Arial,{font_size},{default_color},{highlight_color},&H00000000,"
-        f"&H80000000,-1,0,0,0,100,100,0,0,1,5,3,2,{margin_lr},{margin_lr},{margin_v},1\n\n"
-        "[Events]\n"
+        + "".join(styles)
+        + "\n[Events]\n"
         "Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\n"
     )
 
+    lines: list[str] = [header]
+
+    # Optional viral hook title banner at top of frame for first 3.5 seconds
+    if hook_title:
+        clean_hook = hook_title.strip()
+        if mask_profanity:
+            clean_hook = " ".join(mask_profane_word(w) for w in clean_hook.split())
+        hook_end_str = format_ass_timestamp(max(0.5, hook_duration_s))
+        lines.append(
+            f"Dialogue: 1,0:00:00.00,{hook_end_str},HookBanner,,0,0,0,,"
+            f"{{\\b1}}{clean_hook}{{\\b0}}\n"
+        )
+
     if not words:
+        full_empty = "".join(lines)
         if out_path:
             p = Path(out_path)
             p.parent.mkdir(parents=True, exist_ok=True)
-            p.write_text(header, encoding="utf-8")
-        return header
-
-    lines: list[str] = [header]
+            p.write_text(full_empty, encoding="utf-8")
+        return full_empty
     chunks = chunk_words(words)
 
     for chunk in chunks:

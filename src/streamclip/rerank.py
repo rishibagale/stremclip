@@ -165,20 +165,30 @@ class HeuristicReranker(Reranker):
         if dominant_name == "chat":
             title = f"Chat Surge at {cand.peak_t:.0f}s"
             reason = f"High chat message velocity and emote spikes (chat score: {dominant_val:.2f})"
+            hook_title = "CHAT WENT CRAZY! 💬"
         elif dominant_name == "audio":
             title = f"Audio Climax at {cand.peak_t:.0f}s"
             reason = f"Loud volume and vocal intensity (audio score: {dominant_val:.2f})"
+            hook_title = "WAIT FOR THE SCREAM! 😱"
         elif dominant_name == "vision":
             title = f"Action Climax at {cand.peak_t:.0f}s"
             reason = (
                 f"High visual movement and scene transitions (vision score: {dominant_val:.2f})"
             )
+            hook_title = "INSANE ACTION! 🔥"
         else:
             title = f"Highlight Moment at {cand.peak_t:.0f}s"
             reason = f"Multimodal signal peak detected (score: {cand.score:.2f})"
+            hook_title = "WAIT FOR IT! 👀"
 
         llm_score = min(100.0, max(0.0, round(cand.score * 10.0, 1)))
         final_score = round(cand.score, 3)
+        hook_score = round(
+            min(100.0, max(20.0, cand.score * 8.5 + comps.get("audio", 0.0) * 3.0)), 1
+        )
+        engagement_score = round(min(100.0, max(20.0, cand.score * 10.0)), 1)
+        value_score = round(min(100.0, max(20.0, cand.score * 9.0)), 1)
+        shareability_score = round(min(100.0, max(15.0, comps.get("chat", cand.score) * 12.0)), 1)
 
         return RankedClip(
             candidate=cand,
@@ -186,6 +196,11 @@ class HeuristicReranker(Reranker):
             title=title,
             reason=reason,
             final_score=final_score,
+            hook_score=hook_score,
+            engagement_score=engagement_score,
+            value_score=value_score,
+            shareability_score=shareability_score,
+            hook_title=hook_title,
         )
 
     def rerank(
@@ -215,6 +230,7 @@ class LLMReranker(Reranker):
         max_frames: int = 4,
         max_retries: int = 3,
         http_client: Any | None = None,
+        client: Any | None = None,
         config: Config | None = None,
         vod: VodMeta | None = None,
         min_iou: float = 0.5,
@@ -226,7 +242,7 @@ class LLMReranker(Reranker):
         self.cost_cap = cost_cap
         self.max_frames = max_frames
         self.max_retries = max_retries
-        self.http_client = http_client
+        self.http_client = client if client is not None else http_client
         self.config = config or Config()
         self.vod = vod
         self.min_iou = min_iou
@@ -276,6 +292,10 @@ class LLMReranker(Reranker):
             "Return ONLY a valid JSON object with the following keys:\n"
             '- "score": float between 0.0 and 100.0 (overall standalone quality)\n'
             '- "hook_strength": float between 0.0 and 100.0 (opening 3-5 seconds hook potential)\n'
+            '- "engagement_score": float between 0.0 and 100.0 (viewer retention potential)\n'
+            '- "value_score": float between 0.0 and 100.0 (entertainment or humor value)\n'
+            '- "shareability_score": float between 0.0 and 100.0 (likelihood to share)\n'
+            '- "hook_title": short, punchy 3-5 word viral text banner (e.g. "WAIT FOR IT! 😱")\n'
             '- "title": concise, engaging viral title (under 60 characters)\n'
             '- "reason": one-line explanation of why this moment is highlight-worthy\n'
         )
@@ -322,6 +342,10 @@ class LLMReranker(Reranker):
 
                 score = float(parsed["score"])
                 hook = float(parsed.get("hook_strength", score))
+                engagement = float(parsed.get("engagement_score", score))
+                value = float(parsed.get("value_score", score))
+                shareability = float(parsed.get("shareability_score", hook))
+                hook_title = str(parsed.get("hook_title", "")).strip()
                 title = str(parsed.get("title", "")).strip()
                 reason = str(parsed.get("reason", "")).strip()
                 if not title:
@@ -332,6 +356,10 @@ class LLMReranker(Reranker):
                 return {
                     "score": min(100.0, max(0.0, score)),
                     "hook_strength": min(100.0, max(0.0, hook)),
+                    "engagement_score": min(100.0, max(0.0, engagement)),
+                    "value_score": min(100.0, max(0.0, value)),
+                    "shareability_score": min(100.0, max(0.0, shareability)),
+                    "hook_title": hook_title if hook_title else title[:30].upper(),
                     "title": title,
                     "reason": reason,
                 }
@@ -421,6 +449,12 @@ class LLMReranker(Reranker):
                         3,
                     )
 
+                    hook_title_raw = llm_out.get("hook_title")
+                    hook_title = str(hook_title_raw) if hook_title_raw else title[:30].upper()
+                    engagement = float(llm_out.get("engagement_score", llm_score))
+                    value = float(llm_out.get("value_score", llm_score))
+                    shareability = float(llm_out.get("shareability_score", hook_strength))
+
                     ranked_clips.append(
                         RankedClip(
                             candidate=cand,
@@ -428,6 +462,11 @@ class LLMReranker(Reranker):
                             title=title,
                             reason=reason,
                             final_score=final_score,
+                            hook_score=hook_strength,
+                            engagement_score=engagement,
+                            value_score=value,
+                            shareability_score=shareability,
+                            hook_title=hook_title,
                         )
                     )
                 except Exception:

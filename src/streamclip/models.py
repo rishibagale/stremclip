@@ -106,6 +106,11 @@ class RankedClip(BaseModel):
     title: str
     reason: str
     final_score: float
+    hook_score: float = 0.0
+    engagement_score: float = 0.0
+    value_score: float = 0.0
+    shareability_score: float = 0.0
+    hook_title: str | None = None
 
 
 class FacecamBox(BaseModel):
@@ -125,3 +130,5 @@ class RenderSpec(BaseModel):
     captions: list[Word] = Field(default_factory=list)
     out_w: int = 1080
     out_h: int = 1920
+    hook_title: str | None = None
+    show_hook_banner: bool = True

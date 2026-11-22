@@ -42,10 +42,13 @@ def parse_facecam_arg(
     vod_w: int = 1920,
     vod_h: int = 1080,
 ) -> FacecamBox | None:
-    """Parse --facecam CLI argument supporting presets and explicit coordinates."""
+    """Parse --facecam CLI argument supporting presets, auto-detection, and explicit coordinates."""
     if not val:
         return None
     cleaned = val.strip().lower()
+
+    if cleaned in ("auto", "detect", "none"):
+        return None
 
     if cleaned in ("bottom-left", "bl"):
         w = round(vod_w * 0.22)
@@ -191,6 +194,13 @@ def run(
             dir_okay=False,
         ),
     ] = None,
+    hook_banner: Annotated[
+        bool,
+        typer.Option(
+            "--hook-banner/--no-hook-banner",
+            help="Show dynamic viral hook title banner at top of clip for first 3.5s.",
+        ),
+    ] = True,
     max_workers: Annotated[
         int,
         typer.Option(
@@ -220,6 +230,7 @@ def run(
         layout=layout,
         facecam=parsed_facecam,
         captions_path=captions,
+        show_hook_banner=hook_banner,
         max_workers=max_workers,
     )
 
@@ -255,14 +266,22 @@ def run(
         table.add_column("Start", justify="right")
         table.add_column("End", justify="right")
         table.add_column("Duration", justify="right")
+        table.add_column("Virality (H/E/V/S)", justify="center")
         table.add_column("Score", justify="right")
         for clip_info in plan["clips"]:
+            virality_str = (
+                f"{clip_info.get('hook_score', 0):.0f}/"
+                f"{clip_info.get('engagement_score', 0):.0f}/"
+                f"{clip_info.get('value_score', 0):.0f}/"
+                f"{clip_info.get('shareability_score', 0):.0f}"
+            )
             table.add_row(
                 str(clip_info["rank"]),
                 clip_info["title"],
                 f"{clip_info['start']}s",
                 f"{clip_info['end']}s",
                 f"{clip_info['duration']}s",
+                virality_str,
                 f"{clip_info['score']}",
             )
         console.print(table)
@@ -273,15 +292,21 @@ def run(
     table.add_column("Rank", justify="right")
     table.add_column("Title")
     table.add_column("Window", justify="center")
+    table.add_column("Virality (H/E/V/S)", justify="center")
     table.add_column("Score", justify="right")
     table.add_column("File")
 
     for i, clip in enumerate(result.ranked_clips):
         filename = result.rendered_paths[i].name if i < len(result.rendered_paths) else "-"
+        virality_str = (
+            f"{clip.hook_score:.0f}/{clip.engagement_score:.0f}/"
+            f"{clip.value_score:.0f}/{clip.shareability_score:.0f}"
+        )
         table.add_row(
             str(i + 1),
             clip.title,
             f"{clip.candidate.start:.1f}s - {clip.candidate.end:.1f}s",
+            virality_str,
             f"{clip.final_score:.2f}",
             filename,
         )
@@ -436,6 +461,13 @@ def render(
             dir_okay=False,
         ),
     ] = None,
+    hook_banner: Annotated[
+        bool,
+        typer.Option(
+            "--hook-banner/--no-hook-banner",
+            help="Show dynamic viral hook title banner at top of clip for first 3.5s.",
+        ),
+    ] = True,
     dry_run: Annotated[
         bool,
         typer.Option(
@@ -481,6 +513,7 @@ def render(
         layout=layout,
         facecam=parsed_facecam,
         captions_path=captions,
+        show_hook_banner=hook_banner,
         dry_run=dry_run,
         top_k=top_k,
         max_workers=max_workers,

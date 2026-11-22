@@ -69,6 +69,7 @@ class PipelineOptions:
     candidates_path: Path | None = None
     transcriber: Transcriber | None = None
     captions_path: Path | None = None
+    show_hook_banner: bool = True
 
 
 @dataclass
@@ -285,7 +286,17 @@ def run_pipeline(options: PipelineOptions) -> PipelineResult:
             except Exception:
                 words = []
 
-    # 4. Reranking
+    # 4. Transcript-Aware Boundary Refinement (SupoClip)
+    if words and candidates:
+        from streamclip.windowing import refine_candidates_with_transcript
+
+        candidates = refine_candidates_with_transcript(
+            candidates,
+            words,
+            max_clip_s=cfg.clip_max_s,
+        )
+
+    # 5. Reranking
     effective_top_k = options.top_k if options.top_k is not None else cfg.top_k
     reranker: Reranker
     if options.no_llm:
@@ -324,6 +335,11 @@ def run_pipeline(options: PipelineOptions) -> PipelineResult:
                     "end": round(c.candidate.end, 2),
                     "duration": round(c.candidate.duration, 2),
                     "score": round(c.final_score, 3),
+                    "hook_score": round(c.hook_score, 1),
+                    "engagement_score": round(c.engagement_score, 1),
+                    "value_score": round(c.value_score, 1),
+                    "shareability_score": round(c.shareability_score, 1),
+                    "hook_title": c.hook_title,
                     "reason": c.reason,
                 }
                 for i, c in enumerate(selected_clips)
@@ -367,6 +383,8 @@ def run_pipeline(options: PipelineOptions) -> PipelineResult:
             captions=clip_words,
             out_w=1080,
             out_h=1920,
+            hook_title=clip.hook_title,
+            show_hook_banner=options.show_hook_banner,
         )
 
         # Check if already rendered (cache resumability)
@@ -410,6 +428,11 @@ def run_pipeline(options: PipelineOptions) -> PipelineResult:
                 "end": c.candidate.end,
                 "duration": c.candidate.duration,
                 "final_score": c.final_score,
+                "hook_score": c.hook_score,
+                "engagement_score": c.engagement_score,
+                "value_score": c.value_score,
+                "shareability_score": c.shareability_score,
+                "hook_title": c.hook_title,
                 "llm_score": c.llm_score,
             }
             for i, c in enumerate(selected_clips)
@@ -436,6 +459,7 @@ def render_from_candidates(
     candidates list or JSON file.
     """
     opts = options or PipelineOptions(video=vod_source, out_dir=out_dir)
+    options = opts
     cfg = opts.config or Config()
     out_dir.mkdir(parents=True, exist_ok=True)
 
@@ -467,6 +491,15 @@ def render_from_candidates(
             )
         except Exception:
             words = []
+
+    if words and candidates:
+        from streamclip.windowing import refine_candidates_with_transcript
+
+        candidates = refine_candidates_with_transcript(
+            candidates,
+            words,
+            max_clip_s=cfg.clip_max_s,
+        )
 
     # Heuristic titling and deduplication
     reranker = HeuristicReranker(config=cfg)
@@ -505,6 +538,8 @@ def render_from_candidates(
             captions=clip_words,
             out_w=1080,
             out_h=1920,
+            hook_title=clip.hook_title,
+            show_hook_banner=options.show_hook_banner,
         )
 
         if clip_path.is_file() and clip_path.stat().st_size > 1024:

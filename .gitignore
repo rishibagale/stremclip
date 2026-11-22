@@ -56,3 +56,12 @@ output/
 *.png
 *.ass
 
+# Scratch scripts and test data
+/candidates.json
+/clip1_words.json
+/hd_candidates.json
+/hd_clip1_candidate.json
+/render_with_captions.py
+/transcribe_clip.py
+
+
