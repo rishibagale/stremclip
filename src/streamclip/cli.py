@@ -765,5 +765,47 @@ def tune(
     )
 
 
+@app.command()
+def ui(
+    port: Annotated[
+        int,
+        typer.Option(
+            "--port",
+            "-p",
+            help="Port to bind StreamClip Web UI to.",
+        ),
+    ] = 8501,
+    host: Annotated[
+        str,
+        typer.Option(
+            "--host",
+            "-h",
+            help="Host address to bind StreamClip Web UI to.",
+        ),
+    ] = "localhost",
+    no_browser: Annotated[
+        bool,
+        typer.Option(
+            "--no-browser",
+            help="Do not open browser automatically after starting server.",
+        ),
+    ] = False,
+) -> None:
+    """Launch the interactive StreamClip Web UI dashboard."""
+    try:
+        from streamclip.ui import launch_ui
+    except ImportError:
+        console.print(
+            "[bold red]Error:[/bold red] Streamlit is not installed.\n"
+            "Please install via: [cyan]uv sync --extra ui[/cyan] "
+            "or [cyan]pip install 'streamclip[ui]'[/cyan]"
+        )
+        raise typer.Exit(code=1) from None
+
+    console.print(f"[bold green]Starting StreamClip Web UI on http://{host}:{port}...[/bold green]")
+    code = launch_ui(host=host, port=port, no_browser=no_browser)
+    raise typer.Exit(code=code)
+
+
 if __name__ == "__main__":
     app()
