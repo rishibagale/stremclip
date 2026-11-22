@@ -3,7 +3,10 @@
 from __future__ import annotations
 
 import json
+import re
 import subprocess
+from collections.abc import Callable
+from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
@@ -20,6 +23,111 @@ class DownloadError(VideoIngestError):
 
 class ProbeError(VideoIngestError):
     """Raised when media inspection via ffprobe fails."""
+
+
+@dataclass
+class DownloadProgress:
+    """Real-time progress telemetry from video downloader."""
+
+    percent: float = 0.0
+    speed_str: str = "0.0 MB/s"
+    downloaded_str: str = "0 MB"
+    total_str: str = "0 MB"
+    eta_str: str = "00:00"
+    status: str = "downloading"
+
+
+PROGRESS_PATTERN = re.compile(
+    r"\[download\]\s+([\d\.]+)%\s+of\s+~?\s*([\d\.]+[A-Za-z]+)"
+    r"(?:\s+at\s+([\d\.]+[A-Za-z/]+))?"
+    r"(?:\s+ETA\s+([\d:]+))?"
+)
+
+
+def parse_ytdlp_progress_line(line: str) -> DownloadProgress | None:
+    """Parse a single yt-dlp --newline progress line into a structured DownloadProgress."""
+    m = PROGRESS_PATTERN.search(line)
+    if not m:
+        return None
+    pct_str, total_str, speed_str, eta_str = m.groups()
+    try:
+        pct = float(pct_str)
+    except ValueError:
+        pct = 0.0
+
+    return DownloadProgress(
+        percent=pct,
+        speed_str=speed_str or "N/A",
+        total_str=total_str or "N/A",
+        eta_str=eta_str or "00:00",
+        status="downloading",
+    )
+
+
+def download_with_progress(
+    url: str,
+    dest: Path | str,
+    progress_callback: Callable[[DownloadProgress], None] | None = None,
+    quality: str = "bestvideo+bestaudio/best",
+) -> Path:
+    """Download livestream VOD from URL using yt-dlp with live progress telemetry."""
+    dest_path = Path(dest)
+    dest_path.parent.mkdir(parents=True, exist_ok=True)
+
+    cmd = [
+        "yt-dlp",
+        "--newline",
+        "--no-playlist",
+        "-f",
+        quality,
+        "-o",
+        str(dest_path),
+        url,
+    ]
+
+    try:
+        proc = subprocess.Popen(
+            cmd,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+            text=True,
+            bufsize=1,
+            universal_newlines=True,
+        )
+    except FileNotFoundError as err:
+        raise DownloadError(f"yt-dlp executable not found on PATH: {err}") from err
+    except OSError as err:
+        raise DownloadError(f"Failed to execute yt-dlp process: {err}") from err
+
+    output_lines: list[str] = []
+    if proc.stdout:
+        for line in proc.stdout:
+            output_lines.append(line)
+            if progress_callback:
+                prog = parse_ytdlp_progress_line(line)
+                if prog is not None:
+                    progress_callback(prog)
+
+    proc.wait()
+    if proc.returncode != 0:
+        if output_lines:
+            err_msg = "".join(output_lines[-10:]).strip()
+        else:
+            err_msg = f"exit code {proc.returncode}"
+        raise DownloadError(f"yt-dlp failed: {err_msg}")
+
+    if progress_callback:
+        progress_callback(
+            DownloadProgress(
+                percent=100.0,
+                speed_str="Done",
+                total_str="Complete",
+                eta_str="00:00",
+                status="finished",
+            )
+        )
+
+    return dest_path
 
 
 def download(
