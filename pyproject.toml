@@ -1,9 +1,36 @@
 [project]
 name = "streamclip"
 version = "0.1.0"
-description = "Highlight clips extractor for livestream VODs and chat replay targeting 1080x1920 vertical format."
+description = "High-performance multimodal livestream highlight extractor and 1080x1920 vertical shorts creator."
 readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
 requires-python = ">=3.11"
+authors = [
+    { name = "Rishi Bagale", email = "rushikeshbagle72@gmail.com" },
+]
+keywords = [
+    "livestream",
+    "clips",
+    "video-editing",
+    "opusclip",
+    "supoclip",
+    "whisper",
+    "ffmpeg",
+    "shorts",
+    "tiktok",
+    "facecam",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Multimedia :: Video",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
 dependencies = [
     "numpy>=1.26.0",
     "pydantic>=2.7.0",
@@ -29,6 +56,11 @@ vision = [
 whisper = [
     "faster-whisper>=1.0.0",
 ]
+
+[project.urls]
+Homepage = "https://github.com/rishibagale/stremclip"
+Repository = "https://github.com/rishibagale/stremclip"
+Issues = "https://github.com/rishibagale/stremclip/issues"
 
 [project.scripts]
 streamclip = "streamclip.cli:app"
